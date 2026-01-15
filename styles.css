@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,9 +8,9 @@
 
 body {
   font-family: "Inter", system-ui, sans-serif;
-  color: #1f2933;
-  background: #f8f6f2;
-  line-height: 1.6;
+  color: #1e1e1e;
+  background: #f6f1ea;
+  line-height: 1.7;
 }
 
 a {
@@ -19,20 +19,21 @@ a {
 }
 
 .container {
-  width: min(1100px, 90%);
+  width: min(1080px, 90%);
   margin: 0 auto;
 }
 
 .container.narrow {
-  width: min(720px, 92%);
+  width: min(760px, 92%);
 }
 
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid #e1e5ea;
+  background: rgba(246, 241, 234, 0.96);
+  border-bottom: 1px solid #e2dbd2;
   position: sticky;
   top: 0;
   z-index: 10;
+  backdrop-filter: blur(6px);
 }
 
 .header-inner {
@@ -44,9 +45,11 @@ a {
 }
 
 .logo {
+  font-family: "Cormorant Garamond", serif;
   font-weight: 600;
-  font-size: 1.1rem;
-  letter-spacing: 0.02em;
+  font-size: 1.4rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -56,13 +59,15 @@ a {
 }
 
 .nav-link {
-  color: #4b5563;
+  color: #4b4b46;
   font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
 }
 
 .nav-link.active,
 .nav-link:hover {
-  color: #111827;
+  color: #1e1e1e;
 }
 
 .hero {
@@ -71,33 +76,39 @@ a {
 
 .eyebrow {
   text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-  color: #6b7280;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #6f675f;
   margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.6rem, 4vw, 3.6rem);
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: #111827;
+  color: #1e1e1e;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 2rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.1rem;
   margin-bottom: 1.25rem;
-  color: #111827;
+  color: #1e1e1e;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
   margin-bottom: 0.75rem;
+  font-weight: 600;
 }
 
 .lead {
   font-size: 1.1rem;
-  color: #374151;
+  color: #4d4a45;
   margin-bottom: 2rem;
 }
 
@@ -108,30 +119,31 @@ h3 {
 }
 
 .button {
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
+  padding: 0.75rem 1.7rem;
+  border-radius: 8px;
   border: 1px solid transparent;
   font-weight: 600;
+  letter-spacing: 0.02em;
   transition: all 0.2s ease;
 }
 
 .button.primary {
-  background: #2f6f6c;
+  background: #1f4e4a;
   color: #fff;
 }
 
 .button.primary:hover {
-  background: #285d5a;
+  background: #183f3b;
 }
 
 .button.ghost {
-  border-color: #2f6f6c;
-  color: #2f6f6c;
+  border-color: #1f4e4a;
+  color: #1f4e4a;
   background: transparent;
 }
 
 .button.ghost:hover {
-  background: rgba(47, 111, 108, 0.08);
+  background: rgba(31, 78, 74, 0.08);
 }
 
 .section {
@@ -140,52 +152,123 @@ h3 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.75rem;
 }
 
 .card {
-  background: #fff;
-  padding: 1.8rem;
+  background: #faf7f2;
+  padding: 2rem;
   border-radius: 1.25rem;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e6dfd6;
+  box-shadow: 0 10px 25px rgba(30, 30, 30, 0.08);
 }
 
 .contact-card {
   display: grid;
   gap: 1.5rem;
-  background: #fff;
+  background: #faf7f2;
   padding: 2rem;
   border-radius: 1.5rem;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e6dfd6;
+  box-shadow: 0 10px 25px rgba(30, 30, 30, 0.08);
 }
 
 .contact-card a {
-  color: #2f6f6c;
+  color: #1f4e4a;
   font-weight: 600;
 }
 
 .hint {
   font-size: 0.9rem;
-  color: #6b7280;
+  color: #7a736c;
 }
 
 .note {
   margin-top: 2.5rem;
-  color: #6b7280;
+  color: #7a736c;
   font-size: 0.95rem;
 }
 
 .placeholder {
-  background: #fff;
+  background: #faf7f2;
   border-radius: 1.5rem;
   padding: 2rem;
-  border: 1px dashed #cbd5e1;
+  border: 1px dashed #c7beb3;
 }
 
 .site-footer {
   padding: 2rem 0 3rem;
-  color: #6b7280;
+  color: #7a736c;
+  font-size: 0.9rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.portrait {
+  background: #ebe4da;
+  border-radius: 1.5rem;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid #e0d7cd;
+}
+
+.portrait span {
+  font-size: 0.95rem;
+  color: #6f675f;
+  letter-spacing: 0.03em;
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.list-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: #4d4a45;
+}
+
+.list-item::before {
+  content: "—";
+  color: #1f4e4a;
+}
+
+.section-muted {
+  background: #f1ebe2;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.mobile-contact {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 0.75rem;
+  z-index: 20;
+}
+
+.mobile-contact .button {
+  padding: 0.65rem 1.25rem;
   font-size: 0.9rem;
 }
 
@@ -197,5 +280,9 @@ h3 {
 
   .hero {
     padding-top: 4.5rem;
+  }
+
+  .mobile-contact {
+    display: flex;
   }
 }
