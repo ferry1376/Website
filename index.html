@@ -13,7 +13,9 @@
   <body>
     <header class="site-header">
       <div class="container header-inner">
-        <a class="logo" href="index.html">Esfahani Therapy</a>
+        <a class="logo" href="index.html" data-field="siteName"
+          >Esfahani Therapy</a
+        >
         <nav class="nav">
           <a class="nav-link active" href="index.html">Home</a>
           <a class="nav-link" href="articles.html">Articles</a>
@@ -26,54 +28,53 @@
       <section class="hero">
         <div class="container hero-grid">
           <div>
-            <p class="eyebrow">Psychotherapy Practice</p>
-            <h1>Depth, clarity, and steadiness for the life you want to lead.</h1>
-            <p class="lead">
+            <p class="eyebrow" data-field="heroEyebrow">
+              Psychotherapy Practice
+            </p>
+            <h1 data-field="heroHeadline">
+              Depth, clarity, and steadiness for the life you want to lead.
+            </h1>
+            <p class="lead" data-field="heroLead">
               Esfahani Therapy offers a grounded space to explore the patterns
               beneath the surface and build a life that feels more aligned,
               resilient, and intentional.
             </p>
             <div class="hero-actions">
-              <a class="button primary" href="contact.html">Schedule a call</a>
-              <a class="button ghost" href="articles.html">Read articles</a>
+              <a
+                class="button primary"
+                href="contact.html"
+                data-field="heroPrimaryCtaLabel"
+                data-href="heroPrimaryCtaLink"
+                >Schedule a call</a
+              >
+              <a
+                class="button ghost"
+                href="articles.html"
+                data-field="heroSecondaryCtaLabel"
+                data-href="heroSecondaryCtaLink"
+                >Read articles</a
+              >
             </div>
           </div>
-          <div class="portrait" aria-label="Portrait of the therapist">
-            <span>Portrait placeholder (add a real photo)</span>
-          </div>
+          <figure class="portrait">
+            <img
+              src="uploads/portrait-placeholder.svg"
+              alt="Portrait of the therapist"
+              data-field="portraitImage"
+              data-alt="portraitAlt"
+            />
+          </figure>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2>Therapy that honors complexity</h2>
-          <p class="lead">
+          <h2 data-field="homeSectionTitle">Therapy that honors complexity</h2>
+          <p class="lead" data-field="homeSectionLead">
             Our work is collaborative, thoughtful, and rooted in evidence-based
             practice—guided by warmth, honesty, and curiosity.
           </p>
-          <div class="grid">
-            <div class="card">
-              <h3>Individual sessions</h3>
-              <p>
-                A steady, confidential space to explore the experiences shaping
-                your present and future.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Relationship patterns</h3>
-              <p>
-                Identify recurring dynamics and learn how to move with more
-                agency, clarity, and connection.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Stress and resilience</h3>
-              <p>
-                Practical, grounded tools that help you feel calmer, more
-                centered, and supported.
-              </p>
-            </div>
-          </div>
+          <div class="grid" id="home-cards"></div>
         </div>
       </section>
 
@@ -81,32 +82,37 @@
         <div class="container">
           <div class="hero-grid">
             <div>
-              <h2>Areas of focus</h2>
-              <p class="lead">
+              <h2 data-field="focusSectionTitle">Areas of focus</h2>
+              <p class="lead" data-field="focusSectionLead">
                 Therapy can be a place to unpack anxiety, transitions, grief,
                 or the question of “what’s next.” We support clients who are
                 ready to engage with themselves more deeply.
               </p>
-              <div class="list">
-                <div class="list-item">Anxiety, overwhelm, and burnout</div>
-                <div class="list-item">Major life changes and identity shifts</div>
-                <div class="list-item">Relationship patterns and boundaries</div>
-                <div class="list-item">Self-trust and confidence building</div>
-              </div>
+              <div class="list" id="focus-list"></div>
             </div>
             <div class="card">
-              <h3>Approach</h3>
-              <p>
+              <h3 data-field="approachTitle">Approach</h3>
+              <p data-field="approachBody">
                 We work relationally and integratively, combining insight with
                 practical tools. Sessions are paced with care and grounded in
                 your goals.
               </p>
-              <p class="lead">
+              <p class="lead" data-field="approachLead">
                 Virtual appointments available. In-person sessions by request.
               </p>
               <div class="contact-actions">
-                <a class="button primary" href="contact.html">Get in touch</a>
-                <a class="button ghost" href="articles.html"
+                <a
+                  class="button primary"
+                  href="contact.html"
+                  data-field="approachPrimaryCtaLabel"
+                  data-href="approachPrimaryCtaLink"
+                  >Get in touch</a
+                >
+                <a
+                  class="button ghost"
+                  href="articles.html"
+                  data-field="approachSecondaryCtaLabel"
+                  data-href="approachSecondaryCtaLink"
                   >Explore resources</a
                 >
               </div>
@@ -118,15 +124,26 @@
 
     <footer class="site-footer">
       <div class="container">
-        <p>© 2025 Esfahani Therapy. All rights reserved.</p>
+        <p data-field="footerText">© 2025 Esfahani Therapy. All rights reserved.</p>
       </div>
     </footer>
 
     <div class="mobile-contact" aria-label="Mobile contact actions">
-      <a class="button primary" href="tel:+10000000000">Call</a>
-      <a class="button ghost" href="mailto:hello@esfahani-therapy.com"
+      <a
+        class="button primary"
+        href="tel:+10000000000"
+        data-field="phoneLabel"
+        data-href="phoneLink"
+        >Call</a
+      >
+      <a
+        class="button ghost"
+        href="mailto:hello@esfahani-therapy.com"
+        data-field="emailLabel"
+        data-href="emailLink"
         >Email</a
       >
     </div>
+    <script src="site.js"></script>
   </body>
 </html>

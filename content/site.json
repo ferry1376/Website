@@ -1,0 +1,66 @@
+{
+  "siteName": "Esfahani Therapy",
+  "footerText": "© 2025 Esfahani Therapy. All rights reserved.",
+  "heroEyebrow": "Psychotherapy Practice",
+  "heroHeadline": "Depth, clarity, and steadiness for the life you want to lead.",
+  "heroLead": "Esfahani Therapy offers a grounded space to explore the patterns beneath the surface and build a life that feels more aligned, resilient, and intentional.",
+  "heroPrimaryCtaLabel": "Schedule a call",
+  "heroPrimaryCtaLink": "contact.html",
+  "heroSecondaryCtaLabel": "Read articles",
+  "heroSecondaryCtaLink": "articles.html",
+  "portraitImage": "uploads/portrait-placeholder.svg",
+  "portraitAlt": "Portrait of the therapist",
+  "homeSectionTitle": "Therapy that honors complexity",
+  "homeSectionLead": "Our work is collaborative, thoughtful, and rooted in evidence-based practice—guided by warmth, honesty, and curiosity.",
+  "homeCards": [
+    {
+      "title": "Individual sessions",
+      "body": "A steady, confidential space to explore the experiences shaping your present and future."
+    },
+    {
+      "title": "Relationship patterns",
+      "body": "Identify recurring dynamics and learn how to move with more agency, clarity, and connection."
+    },
+    {
+      "title": "Stress and resilience",
+      "body": "Practical, grounded tools that help you feel calmer, more centered, and supported."
+    }
+  ],
+  "focusSectionTitle": "Areas of focus",
+  "focusSectionLead": "Therapy can be a place to unpack anxiety, transitions, grief, or the question of “what’s next.” We support clients who are ready to engage with themselves more deeply.",
+  "focusList": [
+    "Anxiety, overwhelm, and burnout",
+    "Major life changes and identity shifts",
+    "Relationship patterns and boundaries",
+    "Self-trust and confidence building"
+  ],
+  "approachTitle": "Approach",
+  "approachBody": "We work relationally and integratively, combining insight with practical tools. Sessions are paced with care and grounded in your goals.",
+  "approachLead": "Virtual appointments available. In-person sessions by request.",
+  "approachPrimaryCtaLabel": "Get in touch",
+  "approachPrimaryCtaLink": "contact.html",
+  "approachSecondaryCtaLabel": "Explore resources",
+  "approachSecondaryCtaLink": "articles.html",
+  "articlesEyebrow": "Insights",
+  "articlesHeadline": "Articles & reflections",
+  "articlesLead": "Long-form reflections on relationships, emotional health, and the inner work of change.",
+  "articlesPlaceholderHtml": "<p>The first essays are in progress. Soon, you will find reflections, practices, and resources here.</p>",
+  "articlesPrimaryCtaLabel": "Request a consultation",
+  "articlesPrimaryCtaLink": "contact.html",
+  "articlesSecondaryCtaLabel": "Return home",
+  "articlesSecondaryCtaLink": "index.html",
+  "contactEyebrow": "Connect",
+  "contactHeadline": "Start the conversation",
+  "contactLead": "Reach out to schedule a consultation or ask a question. We respond within two business days.",
+  "emailAddress": "hello@esfahani-therapy.com",
+  "emailLink": "mailto:hello@esfahani-therapy.com",
+  "emailLabel": "Email",
+  "emailCtaLabel": "Email us",
+  "phoneDisplay": "+1 (000) 000-0000",
+  "phoneLink": "tel:+10000000000",
+  "phoneLabel": "Call",
+  "phoneCtaLabel": "Call now",
+  "phoneHint": "Update with your preferred contact number.",
+  "officeHours": "Monday–Friday, 9am–6pm",
+  "contactNote": "If this is an emergency, please contact local emergency services."
+}
