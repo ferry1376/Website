@@ -1,4 +1,5 @@
 const SITE_DATA_URL = "content/site.json";
+const ARTICLES_DATA_URL = "content/articles.json";
 
 const setText = (element, value) => {
   if (element && typeof value === "string" && value.trim() !== "") {
@@ -84,6 +85,29 @@ const renderArticlesPlaceholder = (html) => {
   setHtml(element, html);
 };
 
+const renderArticles = (articles) => {
+  const container = document.querySelector("#articles-list");
+  if (!container || !Array.isArray(articles)) return;
+
+  if (articles.length === 0) {
+    container.innerHTML = "";
+    return;
+  }
+
+  container.innerHTML = articles
+    .map(
+      (article) => `
+      <article class="article-card">
+        ${article.image ? `<img src="${article.image}" alt="${article.imageAlt || article.title}" />` : ""}
+        <div class="article-meta">${article.date || ""}</div>
+        <h3>${article.title}</h3>
+        <p>${article.summary}</p>
+      </article>
+    `
+    )
+    .join("");
+};
+
 fetch(SITE_DATA_URL)
   .then((response) => {
     if (!response.ok) {
@@ -96,6 +120,20 @@ fetch(SITE_DATA_URL)
     renderCards(data.homeCards);
     renderFocusList(data.focusList);
     renderArticlesPlaceholder(data.articlesPlaceholderHtml);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+fetch(ARTICLES_DATA_URL)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Failed to load articles.");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    renderArticles(data.articles);
   })
   .catch((error) => {
     console.error(error);

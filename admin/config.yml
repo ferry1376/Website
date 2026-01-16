@@ -2,6 +2,8 @@ backend:
   name: github
   repo: ferry1376/Website
   branch: main
+  base_url: "https://YOUR-OAUTH-HOST"
+  auth_endpoint: "oauth/authorize"
 
 media_folder: "uploads"
 public_folder: "/uploads"
@@ -150,3 +152,17 @@ collections:
           - { label: "Phone Hint", name: "phoneHint", widget: "string" }
           - { label: "Office Hours", name: "officeHours", widget: "string" }
           - { label: "Contact Note", name: "contactNote", widget: "text" }
+  - name: "articles"
+    label: "Articles"
+    file: "content/articles.json"
+    format: "json"
+    fields:
+      - label: "Articles"
+        name: "articles"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Summary", name: "summary", widget: "text" }
+          - { label: "Date", name: "date", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image Alt Text", name: "imageAlt", widget: "string" }

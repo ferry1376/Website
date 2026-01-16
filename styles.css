@@ -197,6 +197,34 @@ h3 {
   border: 1px dashed #c7beb3;
 }
 
+.articles-list {
+  display: grid;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.article-card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.75rem;
+  background: #fffdf9;
+  border-radius: 1.25rem;
+  border: 1px solid #e6dfd6;
+}
+
+.article-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.article-meta {
+  font-size: 0.9rem;
+  color: #7a736c;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
 .site-footer {
   padding: 2rem 0 3rem;
   color: #7a736c;
