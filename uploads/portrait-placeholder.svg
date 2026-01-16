@@ -1,0 +1,15 @@
+<svg width="720" height="960" viewBox="0 0 720 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="720" height="960" rx="48" fill="#E9E1D7" />
+  <circle cx="360" cy="350" r="120" fill="#D8CEC2" />
+  <rect x="180" y="520" width="360" height="280" rx="140" fill="#D8CEC2" />
+  <text
+    x="360"
+    y="865"
+    text-anchor="middle"
+    font-family="Inter, Arial, sans-serif"
+    font-size="28"
+    fill="#7A736C"
+  >
+    Portrait placeholder
+  </text>
+</svg>
