@@ -2,8 +2,7 @@ backend:
   name: github
   repo: ferry1376/Website
   branch: main
-  base_url: "https://YOUR-OAUTH-HOST"
-  auth_endpoint: "oauth/authorize"
+  site_domain: keen-alpaca-28b0ca.netlify.app
 
 media_folder: "uploads"
 public_folder: "/uploads"
