@@ -2,7 +2,7 @@ backend:
   name: github
   repo: ferry1376/Website
   branch: main
-  site_domain: esfahani-therapy.com
+  site_domain: keen-alpaca-28b0ca.netlify.app
   auth_scope: public_repo
 
 media_folder: "uploads"
