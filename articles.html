@@ -12,20 +12,73 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <a class="logo" href="index.html" data-field="siteName"
-          >Esfahani Therapy</a
-        >
-        <nav class="nav">
-          <a class="nav-link" href="index.html">Home</a>
-          <a class="nav-link active" href="articles.html">Articles</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="nav-ribbon">
+          <a class="logo" href="index.html" data-field="siteName"
+            >Esfahani Therapy</a
+          >
+          <nav class="nav">
+            <div class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+              <button
+                class="nav-arrow"
+                type="button"
+                aria-label="Show home highlights"
+              ></button>
+              <div class="nav-dropdown">
+                <p class="nav-dropdown-label">Home overview</p>
+                <p>Preview the therapy philosophy and areas of focus.</p>
+                <a class="nav-sub-link" href="index.html#home-overview"
+                  >Therapy that honors complexity</a
+                >
+                <a class="nav-sub-link" href="index.html#focus"
+                  >Areas of focus</a
+                >
+              </div>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link active" href="articles.html">Articles</a>
+              <button
+                class="nav-arrow"
+                type="button"
+                aria-label="Show article topics"
+              ></button>
+              <div class="nav-dropdown">
+                <p class="nav-dropdown-label">Articles</p>
+                <p>Read reflections on emotional health and relationships.</p>
+                <a class="nav-sub-link" href="articles.html#articles-listing"
+                  >Featured reflections</a
+                >
+                <a class="nav-sub-link" href="articles.html#articles-resources"
+                  >Upcoming resources</a
+                >
+              </div>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+              <button
+                class="nav-arrow"
+                type="button"
+                aria-label="Show contact options"
+              ></button>
+              <div class="nav-dropdown">
+                <p class="nav-dropdown-label">Contact</p>
+                <p>Reach out for consultations or ongoing therapy.</p>
+                <a class="nav-sub-link" href="contact.html#contact-details"
+                  >Email and phone</a
+                >
+                <a class="nav-sub-link" href="contact.html#contact-hours"
+                  >Office hours</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="section">
+      <section class="section" id="articles-listing">
         <div class="container narrow">
           <p class="eyebrow" data-field="articlesEyebrow">Insights</p>
           <h1 data-field="articlesHeadline">Articles & reflections</h1>
@@ -34,7 +87,11 @@
             inner work of change.
           </p>
           <div class="articles-list" id="articles-list"></div>
-          <div class="placeholder" data-field="articlesPlaceholder">
+          <div
+            class="placeholder"
+            data-field="articlesPlaceholder"
+            id="articles-resources"
+          >
             <p>
               The first essays are in progress. Soon, you will find reflections,
               practices, and resources here.
