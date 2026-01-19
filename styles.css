@@ -36,12 +36,17 @@ a {
   backdrop-filter: blur(6px);
 }
 
-.header-inner {
+.nav-ribbon {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 0;
+  padding: 0.85rem 1.5rem;
   gap: 1.5rem;
+  background: #fdf8f1;
+  border-radius: 1.5rem;
+  border: 1px solid #e6dfd6;
+  box-shadow: 0 12px 25px rgba(38, 32, 28, 0.12);
+  margin: 1.2rem 0;
 }
 
 .logo {
@@ -54,8 +59,75 @@ a {
 
 .nav {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-arrow {
+  border: none;
+  background: transparent;
+  color: #4b4b46;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.15rem 0.3rem;
+  border-radius: 999px;
+  line-height: 1;
+}
+
+.nav-arrow::before {
+  content: "▾";
+  display: block;
+}
+
+.nav-arrow:hover,
+.nav-arrow:focus-visible {
+  background: rgba(31, 78, 74, 0.12);
+  color: #1e1e1e;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 0.9rem);
+  left: 0;
+  min-width: 240px;
+  max-width: 280px;
+  background: #fffaf3;
+  border-radius: 1rem;
+  border: 1px solid #e4ddd4;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 18px 30px rgba(28, 24, 20, 0.12);
+  display: grid;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 20;
+}
+
+.nav-dropdown-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7a736c;
+}
+
+.nav-sub-link {
+  font-weight: 600;
+  color: #1f4e4a;
+  font-size: 0.95rem;
+}
+
+.nav-sub-link:hover {
+  color: #183f3b;
 }
 
 .nav-link {
@@ -68,6 +140,13 @@ a {
 .nav-link.active,
 .nav-link:hover {
   color: #1e1e1e;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .hero {
@@ -303,9 +382,24 @@ h3 {
 }
 
 @media (max-width: 720px) {
-  .header-inner {
+  .nav-ribbon {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1rem 1.25rem;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-dropdown {
+    position: static;
+    opacity: 0;
+    transform: none;
+    pointer-events: none;
+    box-shadow: none;
+    margin-top: 0.5rem;
   }
 
   .hero {
