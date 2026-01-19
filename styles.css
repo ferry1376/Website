@@ -75,9 +75,9 @@ a {
   border: none;
   background: transparent;
   color: #4b4b46;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  padding: 0.15rem 0.3rem;
+  padding: 0.35rem 0.55rem;
   border-radius: 999px;
   line-height: 1;
 }
@@ -153,6 +153,60 @@ a {
   padding: 6rem 0 4rem;
 }
 
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  padding: 7.5rem 0 5rem;
+  border-bottom: 1px solid #e2dbd2;
+}
+
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+}
+
+.hero-slide-placeholder {
+  background: linear-gradient(135deg, #e2d4c2, #cbb8a4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slide-placeholder .hero-slide-shape {
+  width: min(420px, 60%);
+  height: min(420px, 60%);
+  border-radius: 50%;
+  border: 2px dashed rgba(30, 30, 30, 0.15);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  background: rgba(246, 241, 234, 0.85);
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 30px rgba(38, 32, 28, 0.15);
+  backdrop-filter: blur(6px);
+}
+
 .eyebrow {
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -195,6 +249,61 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.hero-controls {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-dots {
+  display: inline-flex;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 999px;
+  border: 1px solid rgba(30, 30, 30, 0.12);
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(31, 78, 74, 0.25);
+  cursor: pointer;
+}
+
+.hero-dot.is-active {
+  background: #1f4e4a;
+}
+
+.hero-media-controls {
+  display: inline-flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-arrow {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(31, 78, 74, 0.85);
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 20px rgba(28, 24, 20, 0.18);
+}
+
+.hero-arrow:hover {
+  background: rgba(24, 63, 59, 0.9);
 }
 
 .button {
@@ -404,6 +513,18 @@ h3 {
 
   .hero {
     padding-top: 4.5rem;
+  }
+
+  .hero-slider {
+    padding: 6rem 0 4rem;
+  }
+
+  .hero-content {
+    padding: 1.5rem;
+  }
+
+  .hero-media-controls {
+    justify-content: flex-start;
   }
 
   .mobile-contact {

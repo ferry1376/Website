@@ -78,9 +78,21 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero hero-slider" aria-label="Featured highlights">
+        <div class="hero-slides">
+          <div
+            class="hero-slide is-active"
+            style="background-image: url('uploads/portrait-placeholder.svg')"
+          ></div>
+          <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
+            <div class="hero-slide-shape"></div>
+          </div>
+          <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
+            <div class="hero-slide-shape"></div>
+          </div>
+        </div>
         <div class="container hero-grid">
-          <div>
+          <div class="hero-content">
             <p class="eyebrow" data-field="heroEyebrow">
               Psychotherapy Practice
             </p>
@@ -108,15 +120,44 @@
                 >Read articles</a
               >
             </div>
+            <div class="hero-controls">
+              <div class="hero-dots" role="tablist" aria-label="Select slide">
+                <button
+                  class="hero-dot is-active"
+                  type="button"
+                  aria-label="Show slide 1"
+                ></button>
+                <button
+                  class="hero-dot"
+                  type="button"
+                  aria-label="Show slide 2"
+                ></button>
+                <button
+                  class="hero-dot"
+                  type="button"
+                  aria-label="Show slide 3"
+                ></button>
+              </div>
+            </div>
           </div>
-          <figure class="portrait">
-            <img
-              src="uploads/portrait-placeholder.svg"
-              alt="Portrait of the therapist"
-              data-field="portraitImage"
-              data-alt="portraitAlt"
-            />
-          </figure>
+          <div class="hero-media-controls">
+            <button
+              class="hero-arrow"
+              type="button"
+              data-direction="prev"
+              aria-label="Previous slide"
+            >
+              <span aria-hidden="true">←</span>
+            </button>
+            <button
+              class="hero-arrow"
+              type="button"
+              data-direction="next"
+              aria-label="Next slide"
+            >
+              <span aria-hidden="true">→</span>
+            </button>
+          </div>
         </div>
       </section>
 
