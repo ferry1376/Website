@@ -12,22 +12,75 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container header-inner">
-        <a class="logo" href="index.html" data-field="siteName"
-          >Esfahani Therapy</a
-        >
-        <nav class="nav">
-          <a class="nav-link active" href="index.html">Home</a>
-          <a class="nav-link" href="articles.html">Articles</a>
-          <a class="nav-link" href="contact.html">Contact</a>
-        </nav>
+      <div class="container">
+        <div class="nav-ribbon">
+          <a class="logo" href="index.html" data-field="siteName"
+            >Esfahani Therapy</a
+          >
+          <nav class="nav">
+            <div class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+              <button
+                class="nav-arrow"
+                type="button"
+                aria-label="Show home highlights"
+              ></button>
+              <div class="nav-dropdown">
+                <p class="nav-dropdown-label">Home overview</p>
+                <p>Preview the therapy philosophy and areas of focus.</p>
+                <a class="nav-sub-link" href="index.html#home-overview"
+                  >Therapy that honors complexity</a
+                >
+                <a class="nav-sub-link" href="index.html#focus"
+                  >Areas of focus</a
+                >
+              </div>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="articles.html">Articles</a>
+              <button
+                class="nav-arrow"
+                type="button"
+                aria-label="Show article topics"
+              ></button>
+              <div class="nav-dropdown">
+                <p class="nav-dropdown-label">Articles</p>
+                <p>Read reflections on emotional health and relationships.</p>
+                <a class="nav-sub-link" href="articles.html#articles-listing"
+                  >Featured reflections</a
+                >
+                <a class="nav-sub-link" href="articles.html#articles-resources"
+                  >Upcoming resources</a
+                >
+              </div>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+              <button
+                class="nav-arrow"
+                type="button"
+                aria-label="Show contact options"
+              ></button>
+              <div class="nav-dropdown">
+                <p class="nav-dropdown-label">Contact</p>
+                <p>Reach out for consultations or ongoing therapy.</p>
+                <a class="nav-sub-link" href="contact.html#contact-details"
+                  >Email and phone</a
+                >
+                <a class="nav-sub-link" href="contact.html#contact-hours"
+                  >Office hours</a
+                >
+              </div>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero hero-slider" aria-label="Featured highlights">
         <div class="container hero-grid">
-          <div>
+          <div class="hero-content">
             <p class="eyebrow" data-field="heroEyebrow">
               Psychotherapy Practice
             </p>
@@ -55,19 +108,62 @@
                 >Read articles</a
               >
             </div>
+            <div class="hero-controls">
+              <div class="hero-dots" role="tablist" aria-label="Select slide">
+                <button
+                  class="hero-dot is-active"
+                  type="button"
+                  aria-label="Show slide 1"
+                ></button>
+                <button
+                  class="hero-dot"
+                  type="button"
+                  aria-label="Show slide 2"
+                ></button>
+                <button
+                  class="hero-dot"
+                  type="button"
+                  aria-label="Show slide 3"
+                ></button>
+              </div>
+            </div>
           </div>
-          <figure class="portrait">
-            <img
-              src="uploads/portrait-placeholder.svg"
-              alt="Portrait of the therapist"
-              data-field="portraitImage"
-              data-alt="portraitAlt"
-            />
-          </figure>
+          <div class="hero-media">
+            <div class="hero-slides">
+              <div
+                class="hero-slide is-active"
+                style="background-image: url('uploads/portrait-placeholder.svg')"
+              ></div>
+              <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
+                <div class="hero-slide-shape"></div>
+              </div>
+              <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
+                <div class="hero-slide-shape"></div>
+              </div>
+            </div>
+            <div class="hero-media-controls">
+              <button
+                class="hero-arrow"
+                type="button"
+                data-direction="prev"
+                aria-label="Previous slide"
+              >
+                <span aria-hidden="true">←</span>
+              </button>
+              <button
+                class="hero-arrow"
+                type="button"
+                data-direction="next"
+                aria-label="Next slide"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="home-overview">
         <div class="container">
           <h2 data-field="homeSectionTitle">Therapy that honors complexity</h2>
           <p class="lead" data-field="homeSectionLead">
@@ -78,7 +174,7 @@
         </div>
       </section>
 
-      <section class="section section-muted">
+      <section class="section section-muted" id="focus">
         <div class="container">
           <div class="hero-grid">
             <div>
