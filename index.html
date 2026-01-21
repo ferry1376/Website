@@ -79,18 +79,6 @@
 
     <main>
       <section class="hero hero-slider" aria-label="Featured highlights">
-        <div class="hero-slides">
-          <div
-            class="hero-slide is-active"
-            style="background-image: url('uploads/portrait-placeholder.svg')"
-          ></div>
-          <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
-            <div class="hero-slide-shape"></div>
-          </div>
-          <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
-            <div class="hero-slide-shape"></div>
-          </div>
-        </div>
         <div class="container hero-grid">
           <div class="hero-content">
             <p class="eyebrow" data-field="heroEyebrow">
@@ -140,23 +128,37 @@
               </div>
             </div>
           </div>
-          <div class="hero-media-controls">
-            <button
-              class="hero-arrow"
-              type="button"
-              data-direction="prev"
-              aria-label="Previous slide"
-            >
-              <span aria-hidden="true">←</span>
-            </button>
-            <button
-              class="hero-arrow"
-              type="button"
-              data-direction="next"
-              aria-label="Next slide"
-            >
-              <span aria-hidden="true">→</span>
-            </button>
+          <div class="hero-media">
+            <div class="hero-slides">
+              <div
+                class="hero-slide is-active"
+                style="background-image: url('uploads/portrait-placeholder.svg')"
+              ></div>
+              <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
+                <div class="hero-slide-shape"></div>
+              </div>
+              <div class="hero-slide hero-slide-placeholder" aria-hidden="true">
+                <div class="hero-slide-shape"></div>
+              </div>
+            </div>
+            <div class="hero-media-controls">
+              <button
+                class="hero-arrow"
+                type="button"
+                data-direction="prev"
+                aria-label="Previous slide"
+              >
+                <span aria-hidden="true">←</span>
+              </button>
+              <button
+                class="hero-arrow"
+                type="button"
+                data-direction="next"
+                aria-label="Next slide"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>
