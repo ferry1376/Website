@@ -2,7 +2,25 @@ const SUPPORTED_LANGUAGES = ["en", "fa"];
 const DEFAULT_LANGUAGE = "en";
 const LANGUAGE_STORAGE_KEY = "preferredLanguage";
 
+const getLanguageFromUrl = () => {
+  const params = new URLSearchParams(window.location.search);
+  const language = params.get("lang");
+  return SUPPORTED_LANGUAGES.includes(language) ? language : null;
+};
+
+const setLanguageInUrl = (language) => {
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", language);
+  return url.toString();
+};
+
 const getPreferredLanguage = () => {
+  const urlLanguage = getLanguageFromUrl();
+  if (urlLanguage) {
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, urlLanguage);
+    return urlLanguage;
+  }
+
   const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
   if (SUPPORTED_LANGUAGES.includes(storedLanguage)) {
     return storedLanguage;
@@ -39,7 +57,7 @@ const setupLanguageToggle = (language) => {
       }
 
       window.localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
-      window.location.reload();
+      window.location.assign(setLanguageInUrl(selectedLanguage));
     });
   });
 };
