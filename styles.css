@@ -619,6 +619,28 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  .hero-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4.5rem 0 4rem;
+  }
+
+  .hero-media {
+    position: relative;
+    order: -1;
+    min-height: 220px;
+    border-radius: 1.25rem;
+  }
+
+  .hero-slides {
+    position: absolute;
+  }
+
+  .hero-slider::before {
+    border-radius: 1.25rem;
+  }
+
   .section-header {
     flex-direction: column;
     align-items: flex-start;
@@ -654,24 +676,19 @@ h3 {
   }
 
   .hero-slider {
-    padding: 6rem 0 4rem;
-    min-height: 480px;
+    min-height: 0;
   }
 
   .hero-content {
     max-width: 100%;
     padding: 1.5rem;
-    background: rgba(247, 241, 233, 0.78);
-    backdrop-filter: blur(6px);
+    background: transparent;
+    box-shadow: none;
   }
 
   .hero-media-controls {
-    bottom: 1rem;
-    right: 1rem;
-  }
-
-  .hero-media {
-    min-height: 100%;
+    bottom: 0.75rem;
+    right: 0.75rem;
   }
 
   .mobile-contact {
