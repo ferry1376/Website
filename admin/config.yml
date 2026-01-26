@@ -9,12 +9,12 @@ media_folder: "uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "site"
-    label: "Site Content"
+  - name: "site_en"
+    label: "Site Content (EN)"
     files:
-      - name: "site"
-        label: "Site Settings"
-        file: "content/site.json"
+      - name: "site_en"
+        label: "Site Settings (EN)"
+        file: "content/site.en.json"
         format: "json"
         fields:
           - { label: "Site Name", name: "siteName", widget: "string" }
@@ -152,12 +152,172 @@ collections:
           - { label: "Phone Hint", name: "phoneHint", widget: "string" }
           - { label: "Office Hours", name: "officeHours", widget: "string" }
           - { label: "Contact Note", name: "contactNote", widget: "text" }
-  - name: "articles"
-    label: "Articles"
+  - name: "site_fa"
+    label: "Site Content (FA)"
     files:
-      - name: "articles"
-        label: "Articles List"
-        file: "content/articles.json"
+      - name: "site_fa"
+        label: "Site Settings (FA)"
+        file: "content/site.fa.json"
+        format: "json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Footer Text", name: "footerText", widget: "string" }
+          - { label: "Hero Eyebrow", name: "heroEyebrow", widget: "string" }
+          - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
+          - { label: "Hero Lead", name: "heroLead", widget: "text" }
+          - {
+              label: "Hero Primary CTA Label",
+              name: "heroPrimaryCtaLabel",
+              widget: "string"
+            }
+          - {
+              label: "Hero Primary CTA Link",
+              name: "heroPrimaryCtaLink",
+              widget: "string"
+            }
+          - {
+              label: "Hero Secondary CTA Label",
+              name: "heroSecondaryCtaLabel",
+              widget: "string"
+            }
+          - {
+              label: "Hero Secondary CTA Link",
+              name: "heroSecondaryCtaLink",
+              widget: "string"
+            }
+          - {
+              label: "Portrait Image",
+              name: "portraitImage",
+              widget: "image"
+            }
+          - { label: "Portrait Alt Text", name: "portraitAlt", widget: "string" }
+          - {
+              label: "Home Section Title",
+              name: "homeSectionTitle",
+              widget: "string"
+            }
+          - {
+              label: "Home Section Lead",
+              name: "homeSectionLead",
+              widget: "text"
+            }
+          - label: "Home Cards"
+            name: "homeCards"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - {
+              label: "Focus Section Title",
+              name: "focusSectionTitle",
+              widget: "string"
+            }
+          - {
+              label: "Focus Section Lead",
+              name: "focusSectionLead",
+              widget: "text"
+            }
+          - label: "Focus List"
+            name: "focusList"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string" }
+            hint: "Enter one item per row."
+          - { label: "Approach Title", name: "approachTitle", widget: "string" }
+          - { label: "Approach Body", name: "approachBody", widget: "text" }
+          - { label: "Approach Lead", name: "approachLead", widget: "text" }
+          - {
+              label: "Approach Primary CTA Label",
+              name: "approachPrimaryCtaLabel",
+              widget: "string"
+            }
+          - {
+              label: "Approach Primary CTA Link",
+              name: "approachPrimaryCtaLink",
+              widget: "string"
+            }
+          - {
+              label: "Approach Secondary CTA Label",
+              name: "approachSecondaryCtaLabel",
+              widget: "string"
+            }
+          - {
+              label: "Approach Secondary CTA Link",
+              name: "approachSecondaryCtaLink",
+              widget: "string"
+            }
+          - {
+              label: "Articles Eyebrow",
+              name: "articlesEyebrow",
+              widget: "string"
+            }
+          - {
+              label: "Articles Headline",
+              name: "articlesHeadline",
+              widget: "string"
+            }
+          - { label: "Articles Lead", name: "articlesLead", widget: "text" }
+          - {
+              label: "Articles Placeholder HTML",
+              name: "articlesPlaceholderHtml",
+              widget: "text"
+            }
+          - {
+              label: "Articles Primary CTA Label",
+              name: "articlesPrimaryCtaLabel",
+              widget: "string"
+            }
+          - {
+              label: "Articles Primary CTA Link",
+              name: "articlesPrimaryCtaLink",
+              widget: "string"
+            }
+          - {
+              label: "Articles Secondary CTA Label",
+              name: "articlesSecondaryCtaLabel",
+              widget: "string"
+            }
+          - {
+              label: "Articles Secondary CTA Link",
+              name: "articlesSecondaryCtaLink",
+              widget: "string"
+            }
+          - { label: "Contact Eyebrow", name: "contactEyebrow", widget: "string" }
+          - { label: "Contact Headline", name: "contactHeadline", widget: "string" }
+          - { label: "Contact Lead", name: "contactLead", widget: "text" }
+          - { label: "Email Address", name: "emailAddress", widget: "string" }
+          - { label: "Email Link", name: "emailLink", widget: "string" }
+          - { label: "Email Label", name: "emailLabel", widget: "string" }
+          - { label: "Email CTA Label", name: "emailCtaLabel", widget: "string" }
+          - { label: "Phone Display", name: "phoneDisplay", widget: "string" }
+          - { label: "Phone Link", name: "phoneLink", widget: "string" }
+          - { label: "Phone Label", name: "phoneLabel", widget: "string" }
+          - { label: "Phone CTA Label", name: "phoneCtaLabel", widget: "string" }
+          - { label: "Phone Hint", name: "phoneHint", widget: "string" }
+          - { label: "Office Hours", name: "officeHours", widget: "string" }
+          - { label: "Contact Note", name: "contactNote", widget: "text" }
+  - name: "articles_en"
+    label: "Articles (EN)"
+    files:
+      - name: "articles_en"
+        label: "Articles List (EN)"
+        file: "content/articles.en.json"
+        format: "json"
+        fields:
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+  - name: "articles_fa"
+    label: "Articles (FA)"
+    files:
+      - name: "articles_fa"
+        label: "Articles List (FA)"
+        file: "content/articles.fa.json"
         format: "json"
         fields:
           - label: "Articles"
