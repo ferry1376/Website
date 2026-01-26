@@ -158,11 +158,25 @@ a {
   overflow: hidden;
   padding: 5.5rem 0 5rem;
   border-bottom: 1px solid #e2dbd2;
+  min-height: 560px;
+}
+
+.hero-slider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(16, 16, 16, 0.15),
+    rgba(16, 16, 16, 0.35)
+  );
+  z-index: 0;
 }
 
 .hero-slides {
   position: absolute;
   inset: 0;
+  z-index: 0;
 }
 
 .hero-slide {
@@ -195,6 +209,12 @@ a {
 
 .hero-content {
   max-width: 460px;
+  position: relative;
+  z-index: 1;
+  background: rgba(247, 241, 233, 0.92);
+  padding: 2.5rem;
+  border-radius: 1.75rem;
+  box-shadow: 0 18px 30px rgba(38, 32, 28, 0.18);
 }
 
 .eyebrow {
@@ -271,11 +291,13 @@ h3 {
 }
 
 .hero-media {
-  position: relative;
-  min-height: 380px;
-  border-radius: 2rem;
+  position: absolute;
+  inset: 0;
+  min-height: 100%;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 18px 30px rgba(38, 32, 28, 0.18);
+  box-shadow: none;
+  z-index: 0;
 }
 
 .hero-media-controls {
@@ -285,6 +307,7 @@ h3 {
   display: inline-flex;
   gap: 0.75rem;
   align-items: center;
+  z-index: 2;
 }
 
 .hero-arrow {
@@ -424,6 +447,12 @@ h3 {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.5rem;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-slider .hero-grid {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .portrait {
@@ -517,10 +546,12 @@ h3 {
 
   .hero-slider {
     padding: 6rem 0 4rem;
+    min-height: 480px;
   }
 
   .hero-content {
     max-width: 100%;
+    padding: 2rem;
   }
 
   .hero-media-controls {
@@ -529,7 +560,7 @@ h3 {
   }
 
   .hero-media {
-    min-height: 280px;
+    min-height: 100%;
   }
 
   .mobile-contact {
