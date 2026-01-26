@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&family=Vazirmatn:wght@300;400;500;600&display=swap");
 
 * {
   box-sizing: border-box;
@@ -17,6 +17,10 @@ body {
   color: #1e1e1e;
   background: #f6f1ea;
   line-height: 1.7;
+}
+
+html[dir="rtl"] body {
+  font-family: "Vazirmatn", "Inter", system-ui, sans-serif;
 }
 
 a {
@@ -71,6 +75,10 @@ a {
   align-items: center;
 }
 
+html[dir="rtl"] .nav {
+  flex-direction: row-reverse;
+}
+
 .nav-item {
   position: static;
   display: inline-flex;
@@ -120,6 +128,41 @@ a {
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 20;
+}
+
+html[dir="rtl"] .nav-dropdown {
+  text-align: right;
+}
+
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid #e0d8cf;
+  background: #fffaf3;
+}
+
+.language-button {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: #4b4b46;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.language-button.is-active {
+  background: #1f4e4a;
+  color: #fffaf3;
+}
+
+html[dir="rtl"] .language-toggle {
+  flex-direction: row-reverse;
 }
 
 .nav-dropdown-label {
