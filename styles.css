@@ -546,10 +546,12 @@ h3 {
   .nav {
     width: 100%;
     justify-content: flex-start;
+    gap: 0.75rem;
   }
 
   .nav-item {
     width: 100%;
+    justify-content: space-between;
   }
 
   .nav-link {
@@ -558,6 +560,10 @@ h3 {
 
   .nav-dropdown {
     width: 100%;
+  }
+
+  .nav-arrow {
+    display: none;
   }
 
   .hero-slider {
@@ -579,6 +585,7 @@ h3 {
 
   .nav-dropdown {
     position: static;
+    display: none;
     opacity: 0;
     transform: none;
     pointer-events: none;
