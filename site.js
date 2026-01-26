@@ -108,6 +108,28 @@ const renderArticles = (articles) => {
     .join("");
 };
 
+const renderLatestArticles = (articles) => {
+  const container = document.querySelector("#latest-articles-list");
+  if (!container || !Array.isArray(articles)) return;
+
+  const latest = articles.slice(0, 3);
+
+  container.innerHTML = latest
+    .map(
+      (article) => `
+      <article class="latest-article-card">
+        <a href="articles.html" aria-label="Read ${article.title}">
+          <div class="latest-article-media">
+            ${article.image ? `<img src="${article.image}" alt="${article.imageAlt || article.title}" />` : ""}
+          </div>
+        </a>
+        <a href="articles.html" class="latest-article-title">${article.title}</a>
+      </article>
+    `
+    )
+    .join("");
+};
+
 fetch(SITE_DATA_URL)
   .then((response) => {
     if (!response.ok) {
@@ -134,6 +156,7 @@ fetch(ARTICLES_DATA_URL)
   })
   .then((data) => {
     renderArticles(data.articles);
+    renderLatestArticles(data.articles);
   })
   .catch((error) => {
     console.error(error);
