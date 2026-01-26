@@ -660,7 +660,9 @@ h3 {
 
   .hero-content {
     max-width: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
+    background: rgba(247, 241, 233, 0.78);
+    backdrop-filter: blur(6px);
   }
 
   .hero-media-controls {
