@@ -61,7 +61,7 @@ a {
   font-weight: 600;
   font-size: 1.4rem;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .nav {
@@ -616,27 +616,6 @@ h3 {
 
   .mobile-contact {
     display: flex;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero-content {
-    border-radius: 1.25rem;
-  }
-
-  .button {
-    width: 100%;
-    text-align: center;
-  }
-
-  .hero-actions,
-  .contact-actions {
-    flex-direction: column;
-  }
-
-  .hero-dots {
-    width: 100%;
     justify-content: center;
   }
 }
