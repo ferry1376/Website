@@ -37,6 +37,7 @@ a {
 }
 
 .nav-ribbon {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,7 +66,7 @@ a {
 }
 
 .nav-item {
-  position: relative;
+  position: static;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -97,12 +98,14 @@ a {
   position: absolute;
   top: calc(100% + 0.9rem);
   left: 0;
-  min-width: 240px;
-  max-width: 280px;
+  right: 0;
+  min-width: 0;
+  max-width: none;
+  width: 100%;
   background: #fffaf3;
   border-radius: 1rem;
   border: 1px solid #e4ddd4;
-  padding: 1rem 1.1rem;
+  padding: 1.25rem 1.5rem;
   box-shadow: 0 18px 30px rgba(28, 24, 20, 0.12);
   display: grid;
   gap: 0.5rem;
