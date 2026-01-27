@@ -113,6 +113,13 @@ const applyBasicFields = (data) => {
     }
   });
 
+  document.querySelectorAll("[data-content]").forEach((element) => {
+    const field = element.dataset.content;
+    if (data[field]) {
+      setAttr(element, "content", data[field]);
+    }
+  });
+
   document.querySelectorAll("[data-href]").forEach((element) => {
     const field = element.dataset.href;
     if (data[field]) {
@@ -308,3 +315,29 @@ const initHeroSlider = () => {
 };
 
 initHeroSlider();
+
+const initNavToggle = () => {
+  const toggleButtons = document.querySelectorAll("[data-nav-toggle]");
+  if (toggleButtons.length === 0) return;
+
+  const setExpanded = (expanded) => {
+    document.body.classList.toggle("nav-open", expanded);
+    toggleButtons.forEach((button) => {
+      button.setAttribute("aria-expanded", expanded ? "true" : "false");
+    });
+  };
+
+  toggleButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      setExpanded(!document.body.classList.contains("nav-open"));
+    });
+  });
+
+  document.querySelectorAll(".nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      setExpanded(false);
+    });
+  });
+};
+
+initNavToggle();

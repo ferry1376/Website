@@ -1,6 +1,13 @@
 {
   "portraitImage": "/uploads/whatsapp-image-2026-01-19-at-12.32.28.jpeg",
   "homePageTitle": "Esfahani Therapy | Home",
+  "homePageDescription": "Esfahani Therapy offers compassionate support and evidence-based care.",
+  "articlesPageTitle": "Esfahani Therapy | Articles",
+  "articlesPageDescription": "Articles and resources from Esfahani Therapy.",
+  "aboutPageDescription": "Learn about Esfahani Therapy, the practice values, and the clinician background.",
+  "contactPageDescription": "Contact Esfahani Therapy to schedule a consultation.",
+  "navMenuAriaLabel": "Open menu",
+  "mobileContactAriaLabel": "Mobile contact actions",
   "navHomeLabel": "Home",
   "navHomeHighlightsAria": "Show home highlights",
   "navHomeOverviewLabel": "Home overview",
