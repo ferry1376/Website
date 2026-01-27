@@ -772,19 +772,24 @@ html[dir="rtl"] .hero-media-controls {
 }
 
 @media (max-width: 720px) {
+  .hero {
+    padding-top: 0;
+  }
+
   .hero-slider {
     display: flex;
     flex-direction: column;
     gap: 0;
-    padding: 4.5rem 0 0;
+    margin-top: -5rem;
+    padding: 5rem 0 0;
   }
 
   .hero-media {
     position: relative;
     order: -1;
-    min-height: 70vh;
+    min-height: 80vh;
     border-radius: 0;
-    margin-top: -4.5rem;
+    margin-top: 0;
   }
 
   .hero-slides {
@@ -813,6 +818,11 @@ html[dir="rtl"] .hero-media-controls {
 
   .nav-toggle {
     margin-inline-start: auto;
+  }
+
+  html[dir="rtl"] .nav-toggle {
+    margin-inline-start: 0;
+    margin-inline-end: auto;
   }
 
   .nav {
