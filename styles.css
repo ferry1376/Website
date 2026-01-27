@@ -771,15 +771,15 @@ h3 {
   .hero-slider {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 4.5rem 0 4rem;
+    gap: 0;
+    padding: 0;
   }
 
   .hero-media {
     position: relative;
     order: -1;
-    min-height: 220px;
-    border-radius: 1.25rem;
+    min-height: 70vh;
+    border-radius: 0;
   }
 
   .hero-slides {
@@ -787,7 +787,7 @@ h3 {
   }
 
   .hero-slider::before {
-    border-radius: 1.25rem;
+    border-radius: 0;
     background: none;
   }
 
