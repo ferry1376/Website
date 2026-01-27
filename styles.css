@@ -99,6 +99,31 @@ html[dir="rtl"] .nav {
   flex-direction: row-reverse;
 }
 
+html[dir="rtl"] .nav-ribbon {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-item {
+  flex-direction: row;
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav-item:nth-child(1) {
+  order: 4;
+}
+
+html[dir="rtl"] .nav-item:nth-child(2) {
+  order: 3;
+}
+
+html[dir="rtl"] .nav-item:nth-child(3) {
+  order: 2;
+}
+
+html[dir="rtl"] .nav-item:nth-child(4) {
+  order: 1;
+}
+
 .nav-item {
   position: static;
   display: inline-flex;
@@ -746,15 +771,15 @@ h3 {
   .hero-slider {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 4.5rem 0 4rem;
+    gap: 0;
+    padding: 0;
   }
 
   .hero-media {
     position: relative;
     order: -1;
-    min-height: 220px;
-    border-radius: 1.25rem;
+    min-height: 70vh;
+    border-radius: 0;
   }
 
   .hero-slides {
@@ -762,7 +787,8 @@ h3 {
   }
 
   .hero-slider::before {
-    border-radius: 1.25rem;
+    border-radius: 0;
+    background: none;
   }
 
   .section-header {
