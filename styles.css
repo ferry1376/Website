@@ -772,6 +772,15 @@ html[dir="rtl"] .hero-media-controls {
 }
 
 @media (max-width: 720px) {
+  .site-header {
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .nav-ribbon {
+    background: rgba(253, 248, 241, 0.92);
+  }
+
   .hero {
     padding-top: 0;
   }
@@ -825,8 +834,8 @@ html[dir="rtl"] .hero-media-controls {
   }
 
   html[dir="rtl"] .nav-toggle {
-    margin-inline-start: auto;
-    margin-inline-end: 0;
+    margin-inline-start: 1rem;
+    margin-inline-end: auto;
   }
 
   .nav {
