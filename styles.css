@@ -104,7 +104,8 @@ html[dir="rtl"] .nav-ribbon {
 }
 
 html[dir="rtl"] .nav-item {
-  flex-direction: row-reverse;
+  flex-direction: row;
+  direction: rtl;
 }
 
 html[dir="rtl"] .nav-item:nth-child(1) {
