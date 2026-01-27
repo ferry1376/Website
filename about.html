@@ -7,6 +7,7 @@
     <meta
       name="description"
       content="Learn about Esfahani Therapy, the practice values, and the clinician background."
+      data-content="aboutPageDescription"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -17,83 +18,154 @@
           <a class="logo" href="index.html" data-field="siteName"
             >Esfahani Therapy</a
           >
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            data-nav-toggle
+            data-aria-label="navMenuAriaLabel"
+          >
+            <span aria-hidden="true">⋯</span>
+          </button>
           <nav class="nav">
             <div class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" data-field="navHomeLabel"
+                >Home</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show home highlights"
+                data-aria-label="navHomeHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Home overview</p>
-                <p>Preview the therapy philosophy and areas of focus.</p>
+                <p class="nav-dropdown-label" data-field="navHomeOverviewLabel">
+                  Home overview
+                </p>
+                <p data-field="navHomeOverviewBody">
+                  Preview the therapy philosophy and areas of focus.
+                </p>
                 <a class="nav-sub-link" href="index.html#home-overview"
+                  data-field="homeSectionTitle"
                   >Therapy that honors complexity</a
                 >
                 <a class="nav-sub-link" href="index.html#focus"
+                  data-field="focusSectionTitle"
                   >Areas of focus</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link active" href="about.html">About</a>
+              <a
+                class="nav-link active"
+                href="about.html"
+                data-field="navAboutLabel"
+                >About</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show about highlights"
+                data-aria-label="navAboutHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">About</p>
-                <p>Learn about the practice, values, and background.</p>
+                <p class="nav-dropdown-label" data-field="navAboutLabel">About</p>
+                <p data-field="navAboutOverviewBody">
+                  Learn about the practice, values, and background.
+                </p>
                 <a class="nav-sub-link" href="about.html#about-story"
+                  data-field="navAboutStoryLabel"
                   >Our story</a
                 >
                 <a class="nav-sub-link" href="about.html#about-values"
+                  data-field="navAboutValuesLabel"
                   >Guiding values</a
                 >
                 <a class="nav-sub-link" href="about.html#about-credentials"
+                  data-field="navAboutCredentialsLabel"
                   >Credentials</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link" href="articles.html">Articles</a>
+              <a
+                class="nav-link"
+                href="articles.html"
+                data-field="navArticlesLabel"
+                >Articles</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show article topics"
+                data-aria-label="navArticlesHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Articles</p>
-                <p>Read reflections on emotional health and relationships.</p>
+                <p class="nav-dropdown-label" data-field="navArticlesLabel">
+                  Articles
+                </p>
+                <p data-field="navArticlesOverviewBody">
+                  Read reflections on emotional health and relationships.
+                </p>
                 <a class="nav-sub-link" href="articles.html#articles-listing"
+                  data-field="navArticlesFeaturedLabel"
                   >Featured reflections</a
                 >
                 <a class="nav-sub-link" href="articles.html#articles-resources"
+                  data-field="navArticlesResourcesLabel"
                   >Upcoming resources</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html" data-field="navContactLabel"
+                >Contact</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show contact options"
+                data-aria-label="navContactHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Contact</p>
-                <p>Reach out for consultations or ongoing therapy.</p>
+                <p class="nav-dropdown-label" data-field="navContactLabel">
+                  Contact
+                </p>
+                <p data-field="navContactOverviewBody">
+                  Reach out for consultations or ongoing therapy.
+                </p>
                 <a class="nav-sub-link" href="contact.html#contact-details"
+                  data-field="navContactEmailPhoneLabel"
                   >Email and phone</a
                 >
                 <a class="nav-sub-link" href="contact.html#contact-hours"
+                  data-field="navContactOfficeHoursLabel"
                   >Office hours</a
                 >
               </div>
             </div>
           </nav>
+          <div class="language-toggle" role="group" aria-label="Language selection">
+            <button
+              class="language-button"
+              type="button"
+              data-language-toggle
+              data-language="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+            <button
+              class="language-button"
+              type="button"
+              data-language-toggle
+              data-language="fa"
+              aria-pressed="false"
+            >
+              FA
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -102,23 +174,40 @@
       <section class="section" id="about-story">
         <div class="container hero-grid">
           <div>
-            <p class="eyebrow">About the practice</p>
-            <h1>Therapy rooted in clarity, care, and collaboration.</h1>
-            <p class="lead">
+            <p class="eyebrow" data-field="aboutEyebrow">About the practice</p>
+            <h1 data-field="aboutHeadline">
+              Therapy rooted in clarity, care, and collaboration.
+            </h1>
+            <p class="lead" data-field="aboutLead">
               Esfahani Therapy is a boutique psychotherapy practice that centers
               depth work, practical tools, and a grounded relationship. Sessions
               are designed to help you feel more steady, connected, and
               self-trusting in the life you are building.
             </p>
             <div class="contact-actions">
-              <a class="button primary" href="contact.html">Schedule a call</a>
-              <a class="button ghost" href="articles.html">Read reflections</a>
+              <a
+                class="button primary"
+                href="contact.html"
+                data-field="aboutPrimaryCtaLabel"
+                >Schedule a call</a
+              >
+              <a
+                class="button ghost"
+                href="articles.html"
+                data-field="aboutSecondaryCtaLabel"
+                >Read reflections</a
+              >
             </div>
           </div>
-          <div class="portrait" aria-label="Practice portrait">
+          <div
+            class="portrait"
+            aria-label="Practice portrait"
+            data-aria-label="aboutPortraitAriaLabel"
+          >
             <img
               src="/uploads/whatsapp-image-2026-01-19-at-12.32.28.jpeg"
               alt="Therapist in a calm studio setting"
+              data-alt="portraitAlt"
             />
           </div>
         </div>
@@ -126,29 +215,29 @@
 
       <section class="section section-muted" id="about-values">
         <div class="container">
-          <h2>Guiding values</h2>
-          <p class="lead">
+          <h2 data-field="guidingValuesTitle">Guiding values</h2>
+          <p class="lead" data-field="guidingValuesLead">
             We approach every client with warmth, transparency, and respect for
             the complexity of their story.
           </p>
           <div class="grid">
             <div class="card">
-              <h3>Relational depth</h3>
-              <p>
+              <h3 data-field="guidingValueRelationalTitle">Relational depth</h3>
+              <p data-field="guidingValueRelationalBody">
                 The therapeutic relationship is a living space to explore
                 patterns, repair ruptures, and experience genuine connection.
               </p>
             </div>
             <div class="card">
-              <h3>Practical integration</h3>
-              <p>
+              <h3 data-field="guidingValuePracticalTitle">Practical integration</h3>
+              <p data-field="guidingValuePracticalBody">
                 Insight matters, and so does action. We translate insight into
                 everyday practices that create steadiness and agency.
               </p>
             </div>
             <div class="card">
-              <h3>Trauma-informed care</h3>
-              <p>
+              <h3 data-field="guidingValueTraumaTitle">Trauma-informed care</h3>
+              <p data-field="guidingValueTraumaBody">
                 Sessions are paced thoughtfully, honoring your nervous system,
                 cultural context, and readiness for change.
               </p>
@@ -160,39 +249,51 @@
       <section class="section" id="about-credentials">
         <div class="container hero-grid">
           <div class="card">
-            <h2>Credentials & training</h2>
-            <p class="lead">
+            <h2 data-field="credentialsTitle">Credentials & training</h2>
+            <p class="lead" data-field="credentialsLead">
               Our clinician draws from integrative, evidence-based modalities
               while staying attuned to each client’s lived experience.
             </p>
             <div class="list">
-              <div class="list-item">Licensed clinical therapist</div>
-              <div class="list-item">
+              <div class="list-item" data-field="credentialsItemOne">
+                Licensed clinical therapist
+              </div>
+              <div class="list-item" data-field="credentialsItemTwo">
                 Advanced training in psychodynamic therapy
               </div>
-              <div class="list-item">
+              <div class="list-item" data-field="credentialsItemThree">
                 Ongoing consultation in relational and trauma-informed practice
               </div>
-              <div class="list-item">
+              <div class="list-item" data-field="credentialsItemFour">
                 Specialized focus on anxiety, identity, and life transitions
               </div>
             </div>
           </div>
           <div>
-            <h3>What to expect</h3>
-            <p>
+            <h3 data-field="expectationsTitle">What to expect</h3>
+            <p data-field="expectationsBody">
               The first few sessions focus on getting to know you—your history,
               goals, and the patterns you want to shift. From there we build a
               cadence that supports meaningful progress, whether you are seeking
               clarity, healing, or growth.
             </p>
-            <p class="note">
+            <p class="note" data-field="expectationsNote">
               Virtual appointments are available for clients across California.
               In-person sessions can be arranged by request.
             </p>
             <div class="contact-actions">
-              <a class="button primary" href="contact.html">Reach out</a>
-              <a class="button ghost" href="index.html">Return home</a>
+              <a
+                class="button primary"
+                href="contact.html"
+                data-field="expectationsPrimaryCtaLabel"
+                >Reach out</a
+              >
+              <a
+                class="button ghost"
+                href="index.html"
+                data-field="expectationsSecondaryCtaLabel"
+                >Return home</a
+              >
             </div>
           </div>
         </div>
@@ -205,7 +306,11 @@
       </div>
     </footer>
 
-    <div class="mobile-contact" aria-label="Mobile contact actions">
+    <div
+      class="mobile-contact"
+      aria-label="Mobile contact actions"
+      data-aria-label="mobileContactAriaLabel"
+    >
       <a
         class="button primary"
         href="tel:+10000000000"
