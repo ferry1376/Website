@@ -7,6 +7,7 @@
     <meta
       name="description"
       content="Learn about Esfahani Therapy, the practice values, and the clinician background."
+      data-content="aboutPageDescription"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -17,83 +18,154 @@
           <a class="logo" href="index.html" data-field="siteName"
             >Esfahani Therapy</a
           >
+          <button
+            class="nav-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            data-nav-toggle
+            data-aria-label="navMenuAriaLabel"
+          >
+            <span aria-hidden="true">⋯</span>
+          </button>
           <nav class="nav">
             <div class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html" data-field="navHomeLabel"
+                >Home</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show home highlights"
+                data-aria-label="navHomeHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Home overview</p>
-                <p>Preview the therapy philosophy and areas of focus.</p>
+                <p class="nav-dropdown-label" data-field="navHomeOverviewLabel">
+                  Home overview
+                </p>
+                <p data-field="navHomeOverviewBody">
+                  Preview the therapy philosophy and areas of focus.
+                </p>
                 <a class="nav-sub-link" href="index.html#home-overview"
+                  data-field="homeSectionTitle"
                   >Therapy that honors complexity</a
                 >
                 <a class="nav-sub-link" href="index.html#focus"
+                  data-field="focusSectionTitle"
                   >Areas of focus</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link active" href="about.html">About</a>
+              <a
+                class="nav-link active"
+                href="about.html"
+                data-field="navAboutLabel"
+                >About</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show about highlights"
+                data-aria-label="navAboutHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">About</p>
-                <p>Learn about the practice, values, and background.</p>
+                <p class="nav-dropdown-label" data-field="navAboutLabel">About</p>
+                <p data-field="navAboutOverviewBody">
+                  Learn about the practice, values, and background.
+                </p>
                 <a class="nav-sub-link" href="about.html#about-story"
+                  data-field="navAboutStoryLabel"
                   >Our story</a
                 >
                 <a class="nav-sub-link" href="about.html#about-values"
+                  data-field="navAboutValuesLabel"
                   >Guiding values</a
                 >
                 <a class="nav-sub-link" href="about.html#about-credentials"
+                  data-field="navAboutCredentialsLabel"
                   >Credentials</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link" href="articles.html">Articles</a>
+              <a
+                class="nav-link"
+                href="articles.html"
+                data-field="navArticlesLabel"
+                >Articles</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show article topics"
+                data-aria-label="navArticlesHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Articles</p>
-                <p>Read reflections on emotional health and relationships.</p>
+                <p class="nav-dropdown-label" data-field="navArticlesLabel">
+                  Articles
+                </p>
+                <p data-field="navArticlesOverviewBody">
+                  Read reflections on emotional health and relationships.
+                </p>
                 <a class="nav-sub-link" href="articles.html#articles-listing"
+                  data-field="navArticlesFeaturedLabel"
                   >Featured reflections</a
                 >
                 <a class="nav-sub-link" href="articles.html#articles-resources"
+                  data-field="navArticlesResourcesLabel"
                   >Upcoming resources</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html" data-field="navContactLabel"
+                >Contact</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show contact options"
+                data-aria-label="navContactHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Contact</p>
-                <p>Reach out for consultations or ongoing therapy.</p>
+                <p class="nav-dropdown-label" data-field="navContactLabel">
+                  Contact
+                </p>
+                <p data-field="navContactOverviewBody">
+                  Reach out for consultations or ongoing therapy.
+                </p>
                 <a class="nav-sub-link" href="contact.html#contact-details"
+                  data-field="navContactEmailPhoneLabel"
                   >Email and phone</a
                 >
                 <a class="nav-sub-link" href="contact.html#contact-hours"
+                  data-field="navContactOfficeHoursLabel"
                   >Office hours</a
                 >
               </div>
             </div>
           </nav>
+          <div class="language-toggle" role="group" aria-label="Language selection">
+            <button
+              class="language-button"
+              type="button"
+              data-language-toggle
+              data-language="en"
+              aria-pressed="false"
+            >
+              EN
+            </button>
+            <button
+              class="language-button"
+              type="button"
+              data-language-toggle
+              data-language="fa"
+              aria-pressed="false"
+            >
+              FA
+            </button>
+          </div>
         </div>
       </div>
     </header>
@@ -205,7 +277,11 @@
       </div>
     </footer>
 
-    <div class="mobile-contact" aria-label="Mobile contact actions">
+    <div
+      class="mobile-contact"
+      aria-label="Mobile contact actions"
+      data-aria-label="mobileContactAriaLabel"
+    >
       <a
         class="button primary"
         href="tel:+10000000000"
