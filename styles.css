@@ -788,6 +788,7 @@ h3 {
 
   .hero-slider::before {
     border-radius: 1.25rem;
+    background: none;
   }
 
   .section-header {
