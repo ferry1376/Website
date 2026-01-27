@@ -99,6 +99,31 @@ html[dir="rtl"] .nav {
   flex-direction: row-reverse;
 }
 
+html[dir="rtl"] .nav-ribbon {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-item {
+  flex-direction: row;
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav-item:nth-child(1) {
+  order: 4;
+}
+
+html[dir="rtl"] .nav-item:nth-child(2) {
+  order: 3;
+}
+
+html[dir="rtl"] .nav-item:nth-child(3) {
+  order: 2;
+}
+
+html[dir="rtl"] .nav-item:nth-child(4) {
+  order: 1;
+}
+
 .nav-item {
   position: static;
   display: inline-flex;
@@ -763,6 +788,7 @@ h3 {
 
   .hero-slider::before {
     border-radius: 1.25rem;
+    background: none;
   }
 
   .section-header {
