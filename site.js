@@ -1,5 +1,73 @@
-const SITE_DATA_URL = "content/site.json";
-const ARTICLES_DATA_URL = "content/articles.json";
+const SUPPORTED_LANGUAGES = ["en", "fa"];
+const DEFAULT_LANGUAGE = "en";
+const LANGUAGE_STORAGE_KEY = "preferredLanguage";
+
+const getLanguageFromUrl = () => {
+  const params = new URLSearchParams(window.location.search);
+  const language = params.get("lang");
+  return SUPPORTED_LANGUAGES.includes(language) ? language : null;
+};
+
+const setLanguageInUrl = (language) => {
+  const url = new URL(window.location.href);
+  url.searchParams.set("lang", language);
+  return url.toString();
+};
+
+const getPreferredLanguage = () => {
+  const urlLanguage = getLanguageFromUrl();
+  if (urlLanguage) {
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, urlLanguage);
+    return urlLanguage;
+  }
+
+  const storedLanguage = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+  if (SUPPORTED_LANGUAGES.includes(storedLanguage)) {
+    return storedLanguage;
+  }
+
+  const documentLanguage = document.documentElement.lang;
+  if (SUPPORTED_LANGUAGES.includes(documentLanguage)) {
+    return documentLanguage;
+  }
+
+  return DEFAULT_LANGUAGE;
+};
+
+const applyLanguage = (language) => {
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-language-toggle]").forEach((button) => {
+    const isActive = button.dataset.language === language;
+    button.classList.toggle("is-active", isActive);
+    button.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
+};
+
+const setupLanguageToggle = (language) => {
+  document.querySelectorAll("[data-language-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const selectedLanguage = button.dataset.language;
+      if (!SUPPORTED_LANGUAGES.includes(selectedLanguage)) return;
+
+      if (selectedLanguage === language) {
+        applyLanguage(selectedLanguage);
+        return;
+      }
+
+      window.localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
+      window.location.assign(setLanguageInUrl(selectedLanguage));
+    });
+  });
+};
+
+const currentLanguage = getPreferredLanguage();
+applyLanguage(currentLanguage);
+setupLanguageToggle(currentLanguage);
+
+const SITE_DATA_URL = `content/site.${currentLanguage}.json`;
+const ARTICLES_DATA_URL = `content/articles.${currentLanguage}.json`;
 
 const setText = (element, value) => {
   if (element && typeof value === "string" && value.trim() !== "") {
@@ -35,6 +103,13 @@ const applyBasicFields = (data) => {
     const field = element.dataset.alt;
     if (data[field]) {
       setAttr(element, "alt", data[field]);
+    }
+  });
+
+  document.querySelectorAll("[data-aria-label]").forEach((element) => {
+    const field = element.dataset.ariaLabel;
+    if (data[field]) {
+      setAttr(element, "aria-label", data[field]);
     }
   });
 
