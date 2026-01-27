@@ -99,6 +99,31 @@ html[dir="rtl"] .nav {
   flex-direction: row-reverse;
 }
 
+html[dir="rtl"] .nav-ribbon {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-item {
+  flex-direction: row;
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav-item:nth-child(1) {
+  order: 4;
+}
+
+html[dir="rtl"] .nav-item:nth-child(2) {
+  order: 3;
+}
+
+html[dir="rtl"] .nav-item:nth-child(3) {
+  order: 2;
+}
+
+html[dir="rtl"] .nav-item:nth-child(4) {
+  order: 1;
+}
+
 .nav-item {
   position: static;
   display: inline-flex;
@@ -443,6 +468,10 @@ h3 {
   z-index: 2;
 }
 
+html[dir="rtl"] .hero-media-controls {
+  direction: ltr;
+}
+
 .hero-arrow {
   width: clamp(44px, 8vw, 64px);
   height: clamp(44px, 8vw, 64px);
@@ -743,18 +772,24 @@ h3 {
 }
 
 @media (max-width: 720px) {
+  .hero {
+    padding-top: 0;
+  }
+
   .hero-slider {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 4.5rem 0 4rem;
+    gap: 0;
+    margin-top: -7rem;
+    padding: 7rem 0 0;
   }
 
   .hero-media {
     position: relative;
     order: -1;
-    min-height: 220px;
-    border-radius: 1.25rem;
+    min-height: 80vh;
+    border-radius: 0;
+    margin-top: 0;
   }
 
   .hero-slides {
@@ -762,7 +797,8 @@ h3 {
   }
 
   .hero-slider::before {
-    border-radius: 1.25rem;
+    border-radius: 0;
+    background: none;
   }
 
   .section-header {
@@ -775,9 +811,22 @@ h3 {
   }
 
   .nav-ribbon {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     padding: 1rem 1.25rem;
+  }
+
+  html[dir="rtl"] .nav-ribbon {
+    flex-direction: row-reverse;
+  }
+
+  .nav-toggle {
+    margin-inline-start: auto;
+  }
+
+  html[dir="rtl"] .nav-toggle {
+    margin-inline-start: auto;
+    margin-inline-end: 0;
   }
 
   .nav {
