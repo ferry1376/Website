@@ -99,6 +99,10 @@ html[dir="rtl"] .nav {
   flex-direction: row-reverse;
 }
 
+html[dir="rtl"] .nav-ribbon {
+  flex-direction: row-reverse;
+}
+
 .nav-item {
   position: static;
   display: inline-flex;
