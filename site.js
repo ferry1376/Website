@@ -106,6 +106,13 @@ const applyBasicFields = (data) => {
     }
   });
 
+  document.querySelectorAll("[data-aria-label]").forEach((element) => {
+    const field = element.dataset.ariaLabel;
+    if (data[field]) {
+      setAttr(element, "aria-label", data[field]);
+    }
+  });
+
   document.querySelectorAll("[data-href]").forEach((element) => {
     const field = element.dataset.href;
     if (data[field]) {

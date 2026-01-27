@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esfahani Therapy | Home</title>
+    <title data-field="homePageTitle">Esfahani Therapy | Home</title>
     <meta
       name="description"
       content="Esfahani Therapy offers compassionate support and evidence-based care."
@@ -19,76 +19,114 @@
           >
           <nav class="nav">
             <div class="nav-item">
-              <a class="nav-link active" href="index.html">Home</a>
+              <a class="nav-link active" href="index.html" data-field="navHomeLabel"
+                >Home</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show home highlights"
+                data-aria-label="navHomeHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Home overview</p>
-                <p>Preview the therapy philosophy and areas of focus.</p>
+                <p class="nav-dropdown-label" data-field="navHomeOverviewLabel">
+                  Home overview
+                </p>
+                <p data-field="navHomeOverviewBody">
+                  Preview the therapy philosophy and areas of focus.
+                </p>
                 <a class="nav-sub-link" href="index.html#home-overview"
+                  data-field="homeSectionTitle"
                   >Therapy that honors complexity</a
                 >
                 <a class="nav-sub-link" href="index.html#focus"
+                  data-field="focusSectionTitle"
                   >Areas of focus</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
+              <a class="nav-link" href="about.html" data-field="navAboutLabel"
+                >About</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show about highlights"
+                data-aria-label="navAboutHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">About</p>
-                <p>Learn about the practice, values, and background.</p>
+                <p class="nav-dropdown-label" data-field="navAboutLabel">About</p>
+                <p data-field="navAboutOverviewBody">
+                  Learn about the practice, values, and background.
+                </p>
                 <a class="nav-sub-link" href="about.html#about-story"
+                  data-field="navAboutStoryLabel"
                   >Our story</a
                 >
                 <a class="nav-sub-link" href="about.html#about-values"
+                  data-field="navAboutValuesLabel"
                   >Guiding values</a
                 >
                 <a class="nav-sub-link" href="about.html#about-credentials"
+                  data-field="navAboutCredentialsLabel"
                   >Credentials</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link" href="articles.html">Articles</a>
+              <a
+                class="nav-link"
+                href="articles.html"
+                data-field="navArticlesLabel"
+                >Articles</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show article topics"
+                data-aria-label="navArticlesHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Articles</p>
-                <p>Read reflections on emotional health and relationships.</p>
+                <p class="nav-dropdown-label" data-field="navArticlesLabel">
+                  Articles
+                </p>
+                <p data-field="navArticlesOverviewBody">
+                  Read reflections on emotional health and relationships.
+                </p>
                 <a class="nav-sub-link" href="articles.html#articles-listing"
+                  data-field="navArticlesFeaturedLabel"
                   >Featured reflections</a
                 >
                 <a class="nav-sub-link" href="articles.html#articles-resources"
+                  data-field="navArticlesResourcesLabel"
                   >Upcoming resources</a
                 >
               </div>
             </div>
             <div class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html" data-field="navContactLabel"
+                >Contact</a
+              >
               <button
                 class="nav-arrow"
                 type="button"
                 aria-label="Show contact options"
+                data-aria-label="navContactHighlightsAria"
               ></button>
               <div class="nav-dropdown">
-                <p class="nav-dropdown-label">Contact</p>
-                <p>Reach out for consultations or ongoing therapy.</p>
+                <p class="nav-dropdown-label" data-field="navContactLabel">
+                  Contact
+                </p>
+                <p data-field="navContactOverviewBody">
+                  Reach out for consultations or ongoing therapy.
+                </p>
                 <a class="nav-sub-link" href="contact.html#contact-details"
+                  data-field="navContactEmailPhoneLabel"
                   >Email and phone</a
                 >
                 <a class="nav-sub-link" href="contact.html#contact-hours"
+                  data-field="navContactOfficeHoursLabel"
                   >Office hours</a
                 >
               </div>
@@ -154,56 +192,7 @@
             </button>
           </div>
         </div>
-        <div class="container hero-grid">
-          <div class="hero-content">
-            <p class="eyebrow" data-field="heroEyebrow">
-              Psychotherapy Practice
-            </p>
-            <h1 data-field="heroHeadline">
-              Depth, clarity, and steadiness for the life you want to lead.
-            </h1>
-            <p class="lead" data-field="heroLead">
-              Esfahani Therapy offers a grounded space to explore the patterns
-              beneath the surface and build a life that feels more aligned,
-              resilient, and intentional.
-            </p>
-            <div class="hero-actions">
-              <a
-                class="button primary"
-                href="contact.html"
-                data-field="heroPrimaryCtaLabel"
-                data-href="heroPrimaryCtaLink"
-                >Schedule a call</a
-              >
-              <a
-                class="button ghost"
-                href="articles.html"
-                data-field="heroSecondaryCtaLabel"
-                data-href="heroSecondaryCtaLink"
-                >Read articles</a
-              >
-            </div>
-            <div class="hero-controls">
-              <div class="hero-dots" role="tablist" aria-label="Select slide">
-                <button
-                  class="hero-dot is-active"
-                  type="button"
-                  aria-label="Show slide 1"
-                ></button>
-                <button
-                  class="hero-dot"
-                  type="button"
-                  aria-label="Show slide 2"
-                ></button>
-                <button
-                  class="hero-dot"
-                  type="button"
-                  aria-label="Show slide 3"
-                ></button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="container hero-grid"></div>
       </section>
 
       <section class="section latest-articles-section" id="latest-articles">
