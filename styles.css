@@ -89,10 +89,30 @@ a {
   justify-content: center;
 }
 
-.nav-toggle span {
-  line-height: 1;
+.nav-toggle-icon {
+  width: 18px;
+  height: 2px;
+  background: currentColor;
   display: block;
-  transform: translateY(-2px);
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+}
+
+.nav-toggle-icon::before {
+  top: -6px;
+}
+
+.nav-toggle-icon::after {
+  top: 6px;
 }
 
 html[dir="rtl"] .nav {
