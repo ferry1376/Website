@@ -153,148 +153,152 @@ collections:
           - { label: "Office Hours", name: "officeHours", widget: "string" }
           - { label: "Contact Note", name: "contactNote", widget: "text" }
   - name: "site_fa"
-    label: "Site Content (FA)"
+    label: "محتوای سایت (فارسی)"
     files:
       - name: "site_fa"
-        label: "Site Settings (FA)"
+        label: "تنظیمات سایت (فارسی)"
         file: "content/site.fa.json"
         format: "json"
         fields:
-          - { label: "Site Name", name: "siteName", widget: "string" }
-          - { label: "Footer Text", name: "footerText", widget: "string" }
-          - { label: "Hero Eyebrow", name: "heroEyebrow", widget: "string" }
-          - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
-          - { label: "Hero Lead", name: "heroLead", widget: "text" }
+          - { label: "نام سایت", name: "siteName", widget: "string" }
+          - { label: "متن پاورقی", name: "footerText", widget: "string" }
+          - { label: "عنوان کوتاه هدر", name: "heroEyebrow", widget: "string" }
+          - { label: "تیتر اصلی هدر", name: "heroHeadline", widget: "string" }
+          - { label: "متن معرفی هدر", name: "heroLead", widget: "text" }
           - {
-              label: "Hero Primary CTA Label",
+              label: "برچسب دکمهٔ اصلی هدر",
               name: "heroPrimaryCtaLabel",
               widget: "string"
             }
           - {
-              label: "Hero Primary CTA Link",
+              label: "لینک دکمهٔ اصلی هدر",
               name: "heroPrimaryCtaLink",
               widget: "string"
             }
           - {
-              label: "Hero Secondary CTA Label",
+              label: "برچسب دکمهٔ دوم هدر",
               name: "heroSecondaryCtaLabel",
               widget: "string"
             }
           - {
-              label: "Hero Secondary CTA Link",
+              label: "لینک دکمهٔ دوم هدر",
               name: "heroSecondaryCtaLink",
               widget: "string"
             }
           - {
-              label: "Portrait Image",
+              label: "تصویر پرتره",
               name: "portraitImage",
               widget: "image"
             }
-          - { label: "Portrait Alt Text", name: "portraitAlt", widget: "string" }
           - {
-              label: "Home Section Title",
+              label: "متن جایگزین تصویر پرتره",
+              name: "portraitAlt",
+              widget: "string"
+            }
+          - {
+              label: "عنوان بخش صفحهٔ اصلی",
               name: "homeSectionTitle",
               widget: "string"
             }
           - {
-              label: "Home Section Lead",
+              label: "متن معرفی بخش صفحهٔ اصلی",
               name: "homeSectionLead",
               widget: "text"
             }
-          - label: "Home Cards"
+          - label: "کارت‌های صفحهٔ اصلی"
             name: "homeCards"
             widget: "list"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Body", name: "body", widget: "text" }
+              - { label: "عنوان (آیتم کارت)", name: "title", widget: "string" }
+              - { label: "متن (آیتم کارت)", name: "body", widget: "text" }
           - {
-              label: "Focus Section Title",
+              label: "عنوان بخش تمرکز",
               name: "focusSectionTitle",
               widget: "string"
             }
           - {
-              label: "Focus Section Lead",
+              label: "متن معرفی بخش تمرکز",
               name: "focusSectionLead",
               widget: "text"
             }
-          - label: "Focus List"
+          - label: "فهرست تمرکز"
             name: "focusList"
             widget: "list"
-            field: { label: "Item", name: "item", widget: "string" }
+            field: { label: "آیتم (فهرست)", name: "item", widget: "string" }
             hint: "Enter one item per row."
-          - { label: "Approach Title", name: "approachTitle", widget: "string" }
-          - { label: "Approach Body", name: "approachBody", widget: "text" }
-          - { label: "Approach Lead", name: "approachLead", widget: "text" }
+          - { label: "عنوان رویکرد", name: "approachTitle", widget: "string" }
+          - { label: "متن رویکرد", name: "approachBody", widget: "text" }
+          - { label: "متن معرفی رویکرد", name: "approachLead", widget: "text" }
           - {
-              label: "Approach Primary CTA Label",
+              label: "برچسب دکمهٔ اصلی رویکرد",
               name: "approachPrimaryCtaLabel",
               widget: "string"
             }
           - {
-              label: "Approach Primary CTA Link",
+              label: "لینک دکمهٔ اصلی رویکرد",
               name: "approachPrimaryCtaLink",
               widget: "string"
             }
           - {
-              label: "Approach Secondary CTA Label",
+              label: "برچسب دکمهٔ دوم رویکرد",
               name: "approachSecondaryCtaLabel",
               widget: "string"
             }
           - {
-              label: "Approach Secondary CTA Link",
+              label: "لینک دکمهٔ دوم رویکرد",
               name: "approachSecondaryCtaLink",
               widget: "string"
             }
           - {
-              label: "Articles Eyebrow",
+              label: "عنوان کوتاه مقالات",
               name: "articlesEyebrow",
               widget: "string"
             }
           - {
-              label: "Articles Headline",
+              label: "تیتر مقالات",
               name: "articlesHeadline",
               widget: "string"
             }
-          - { label: "Articles Lead", name: "articlesLead", widget: "text" }
+          - { label: "متن معرفی مقالات", name: "articlesLead", widget: "text" }
           - {
-              label: "Articles Placeholder HTML",
+              label: "HTML جایگزین مقالات",
               name: "articlesPlaceholderHtml",
               widget: "text"
             }
           - {
-              label: "Articles Primary CTA Label",
+              label: "برچسب دکمهٔ اصلی مقالات",
               name: "articlesPrimaryCtaLabel",
               widget: "string"
             }
           - {
-              label: "Articles Primary CTA Link",
+              label: "لینک دکمهٔ اصلی مقالات",
               name: "articlesPrimaryCtaLink",
               widget: "string"
             }
           - {
-              label: "Articles Secondary CTA Label",
+              label: "برچسب دکمهٔ دوم مقالات",
               name: "articlesSecondaryCtaLabel",
               widget: "string"
             }
           - {
-              label: "Articles Secondary CTA Link",
+              label: "لینک دکمهٔ دوم مقالات",
               name: "articlesSecondaryCtaLink",
               widget: "string"
             }
-          - { label: "Contact Eyebrow", name: "contactEyebrow", widget: "string" }
-          - { label: "Contact Headline", name: "contactHeadline", widget: "string" }
-          - { label: "Contact Lead", name: "contactLead", widget: "text" }
-          - { label: "Email Address", name: "emailAddress", widget: "string" }
-          - { label: "Email Link", name: "emailLink", widget: "string" }
-          - { label: "Email Label", name: "emailLabel", widget: "string" }
-          - { label: "Email CTA Label", name: "emailCtaLabel", widget: "string" }
-          - { label: "Phone Display", name: "phoneDisplay", widget: "string" }
-          - { label: "Phone Link", name: "phoneLink", widget: "string" }
-          - { label: "Phone Label", name: "phoneLabel", widget: "string" }
-          - { label: "Phone CTA Label", name: "phoneCtaLabel", widget: "string" }
-          - { label: "Phone Hint", name: "phoneHint", widget: "string" }
-          - { label: "Office Hours", name: "officeHours", widget: "string" }
-          - { label: "Contact Note", name: "contactNote", widget: "text" }
+          - { label: "عنوان کوتاه تماس", name: "contactEyebrow", widget: "string" }
+          - { label: "تیتر تماس", name: "contactHeadline", widget: "string" }
+          - { label: "متن معرفی تماس", name: "contactLead", widget: "text" }
+          - { label: "نشانی ایمیل", name: "emailAddress", widget: "string" }
+          - { label: "لینک ایمیل", name: "emailLink", widget: "string" }
+          - { label: "برچسب ایمیل", name: "emailLabel", widget: "string" }
+          - { label: "برچسب دکمهٔ ایمیل", name: "emailCtaLabel", widget: "string" }
+          - { label: "نمایش شماره تلفن", name: "phoneDisplay", widget: "string" }
+          - { label: "لینک تلفن", name: "phoneLink", widget: "string" }
+          - { label: "برچسب تلفن", name: "phoneLabel", widget: "string" }
+          - { label: "برچسب دکمهٔ تلفن", name: "phoneCtaLabel", widget: "string" }
+          - { label: "راهنمای تلفن", name: "phoneHint", widget: "string" }
+          - { label: "ساعات کاری", name: "officeHours", widget: "string" }
+          - { label: "یادداشت تماس", name: "contactNote", widget: "text" }
   - name: "articles_en"
     label: "Articles (EN)"
     files:
@@ -313,19 +317,19 @@ collections:
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
   - name: "articles_fa"
-    label: "Articles (FA)"
+    label: "مقالات (فارسی)"
     files:
       - name: "articles_fa"
-        label: "Articles List (FA)"
+        label: "فهرست مقالات (فارسی)"
         file: "content/articles.fa.json"
         format: "json"
         fields:
-          - label: "Articles"
+          - label: "مقالات"
             name: "articles"
             widget: "list"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Summary", name: "summary", widget: "text" }
-              - { label: "Date", name: "date", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - { label: "عنوان", name: "title", widget: "string" }
+              - { label: "خلاصه", name: "summary", widget: "text" }
+              - { label: "تاریخ", name: "date", widget: "string" }
+              - { label: "تصویر", name: "image", widget: "image" }
+              - { label: "متن جایگزین تصویر", name: "imageAlt", widget: "string" }
