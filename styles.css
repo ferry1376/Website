@@ -38,8 +38,8 @@ a {
 }
 
 .site-header {
-  background: rgba(246, 241, 234, 0.96);
-  border-bottom: 1px solid #e2dbd2;
+  background: transparent;
+  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -53,11 +53,11 @@ a {
   justify-content: space-between;
   padding: clamp(0.75rem, 1.5vw, 0.85rem) clamp(1rem, 2vw, 1.5rem);
   gap: clamp(1rem, 2vw, 1.5rem);
-  background: #fdf8f1;
-  border-radius: 1.5rem;
-  border: 1px solid #e6dfd6;
-  box-shadow: 0 12px 25px rgba(38, 32, 28, 0.12);
-  margin: 1.2rem 0;
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  margin: 0.75rem 0;
 }
 
 .logo {
@@ -89,10 +89,30 @@ a {
   justify-content: center;
 }
 
-.nav-toggle span {
-  line-height: 1;
+.nav-toggle-icon {
+  width: 18px;
+  height: 2px;
+  background: currentColor;
   display: block;
-  transform: translateY(-2px);
+  position: relative;
+}
+
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: currentColor;
+}
+
+.nav-toggle-icon::before {
+  top: -6px;
+}
+
+.nav-toggle-icon::after {
+  top: 6px;
 }
 
 html[dir="rtl"] .nav {
@@ -314,9 +334,13 @@ html[dir="rtl"] .language-toggle {
 .hero-slider {
   position: relative;
   overflow: hidden;
-  padding: clamp(4rem, 6vw, 5.5rem) 0 clamp(3.5rem, 5vw, 5rem);
+  padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 5vw, 5rem);
   border-bottom: 1px solid #e2dbd2;
   min-height: clamp(420px, 60vh, 560px);
+}
+
+body.home .hero-slider {
+  margin-top: clamp(-5.5rem, -10vw, -7.5rem);
 }
 
 .hero-slider::before {
