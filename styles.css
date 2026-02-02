@@ -334,9 +334,8 @@ html[dir="rtl"] .language-toggle {
 .hero-slider {
   position: relative;
   overflow: hidden;
-  padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 5vw, 5rem);
+  padding: clamp(5.5rem, 10vw, 7.5rem) 0;
   border-bottom: 1px solid #e2dbd2;
-  min-height: clamp(420px, 60vh, 560px);
 }
 
 body.home .hero-slider {
@@ -356,18 +355,22 @@ body.home .hero-slider {
 }
 
 .hero-slides {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  display: grid;
   z-index: 0;
 }
 
 .hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center 20%;
+  grid-area: 1 / 1;
+  position: relative;
   opacity: 0;
   transition: opacity 0.6s ease;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-slide.is-active {
@@ -473,9 +476,7 @@ h3 {
 }
 
 .hero-media {
-  position: absolute;
-  inset: 0;
-  min-height: 100%;
+  position: relative;
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
