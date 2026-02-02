@@ -334,9 +334,8 @@ html[dir="rtl"] .language-toggle {
 .hero-slider {
   position: relative;
   overflow: hidden;
-  padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 5vw, 5rem);
+  padding: clamp(5.5rem, 10vw, 7.5rem) 0;
   border-bottom: 1px solid #e2dbd2;
-  min-height: clamp(420px, 60vh, 560px);
 }
 
 body.home .hero-slider {
