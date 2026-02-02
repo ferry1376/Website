@@ -343,15 +343,7 @@ body.home .hero-slider {
 }
 
 .hero-slider::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(16, 16, 16, 0.15),
-    rgba(16, 16, 16, 0.35)
-  );
-  z-index: 0;
+  display: none;
 }
 
 .hero-slides {
