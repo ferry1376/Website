@@ -349,19 +349,22 @@ body.home .hero-slider {
 .hero-slides {
   position: relative;
   display: grid;
+  height: 100%;
   z-index: 0;
 }
 
 .hero-slide {
   grid-area: 1 / 1;
   position: relative;
+  height: 100%;
   opacity: 0;
   transition: opacity 0.6s ease;
 }
 
 .hero-slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -469,6 +472,7 @@ h3 {
 
 .hero-media {
   position: relative;
+  aspect-ratio: 3 / 2;
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
