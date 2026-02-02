@@ -356,18 +356,22 @@ body.home .hero-slider {
 }
 
 .hero-slides {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  display: grid;
   z-index: 0;
 }
 
 .hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center 20%;
+  grid-area: 1 / 1;
+  position: relative;
   opacity: 0;
   transition: opacity 0.6s ease;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .hero-slide.is-active {
@@ -473,9 +477,7 @@ h3 {
 }
 
 .hero-media {
-  position: absolute;
-  inset: 0;
-  min-height: 100%;
+  position: relative;
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
