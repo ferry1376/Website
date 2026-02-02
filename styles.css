@@ -365,7 +365,7 @@ body.home .hero-slider {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   opacity: 0;
   transition: opacity 0.6s ease;
 }
