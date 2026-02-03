@@ -308,6 +308,10 @@ html[dir="rtl"] .language-toggle {
 
   .nav-open .nav {
     display: flex;
+    background: rgba(253, 248, 241, 0.88);
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 12px 24px rgba(28, 24, 20, 0.12);
   }
 
   .nav-open .language-toggle {
