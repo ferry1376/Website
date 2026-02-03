@@ -307,11 +307,6 @@ const initHeroSlider = () => {
     });
   });
 
-  if (window.matchMedia("(hover: hover)").matches) {
-    slider.addEventListener("mouseenter", stopTimer);
-    slider.addEventListener("mouseleave", startTimer);
-  }
-
   setActiveSlide(0);
   startTimer();
 };
