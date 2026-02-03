@@ -304,19 +304,11 @@ const initHeroSlider = () => {
   };
 
   dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => activateDot(index));
-    dot.addEventListener("pointerup", (event) => {
-      if (event.pointerType === "mouse") return;
-      activateDot(index);
-    });
+    dot.addEventListener("pointerup", () => activateDot(index));
   });
 
   arrows.forEach((arrow) => {
-    arrow.addEventListener("click", () => activateArrow(arrow));
-    arrow.addEventListener("pointerup", (event) => {
-      if (event.pointerType === "mouse") return;
-      activateArrow(arrow);
-    });
+    arrow.addEventListener("pointerup", () => activateArrow(arrow));
   });
 
   setActiveSlide(0);
