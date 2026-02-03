@@ -816,7 +816,7 @@ html[dir="rtl"] .hero-media-controls {
   }
 
   .nav-ribbon {
-    background: rgba(253, 248, 241, 0.92);
+    background: transparent;
   }
 
   .hero {
@@ -888,7 +888,7 @@ html[dir="rtl"] .hero-media-controls {
   }
 
   .hero {
-    padding-top: 4.5rem;
+    padding-top: 0;
   }
 
   .hero-slider {
