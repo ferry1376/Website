@@ -315,6 +315,11 @@ html[dir="rtl"] .language-toggle {
     margin-left: auto;
   }
 
+  .nav-open .nav-link,
+  .nav-open .language-button {
+    text-shadow: 0 2px 4px rgba(16, 16, 16, 0.35);
+  }
+
   html[dir="rtl"] .nav-open .language-toggle {
     margin-right: auto;
     margin-left: 0;
