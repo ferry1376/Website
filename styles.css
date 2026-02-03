@@ -691,6 +691,7 @@ html[dir="rtl"] .hero-media-controls {
   align-items: center;
   grid-template-columns: minmax(0, 1fr);
   padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 5vw, 5rem);
+  pointer-events: none;
 }
 
 .portrait {
