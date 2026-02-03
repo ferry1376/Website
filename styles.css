@@ -334,12 +334,15 @@ html[dir="rtl"] .language-toggle {
 .hero-slider {
   position: relative;
   overflow: hidden;
-  padding: clamp(5.5rem, 10vw, 7.5rem) 0;
+  padding: 0;
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  max-height: 70vh;
   border-bottom: 1px solid #e2dbd2;
 }
 
 body.home .hero-slider {
-  margin-top: clamp(-5.5rem, -10vw, -7.5rem);
+  margin-top: 0;
 }
 
 .hero-slider::before {
@@ -788,7 +791,7 @@ html[dir="rtl"] .hero-media-controls {
   }
 
   .hero-slider {
-    min-height: clamp(420px, 70vh, 520px);
+    max-height: 70vh;
   }
 }
 
@@ -810,14 +813,17 @@ html[dir="rtl"] .hero-media-controls {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-top: -7rem;
-    padding: 7rem 0 0;
+    margin-top: 0;
+    padding: 0;
+    aspect-ratio: 4 / 5;
+    max-height: 80vh;
   }
 
   .hero-media {
     position: relative;
     order: -1;
-    min-height: 80vh;
+    min-height: 0;
+    height: 100%;
     border-radius: 0;
     margin-top: 0;
   }
