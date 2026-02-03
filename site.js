@@ -288,27 +288,28 @@ const initHeroSlider = () => {
     }
   };
 
+  const activateDot = (index) => {
+    goToSlide(index);
+    startTimer();
+  };
+
+  const activateArrow = (arrow) => {
+    const direction = arrow.dataset.direction;
+    if (direction === "prev") {
+      goToSlide(currentIndex - 1);
+    } else {
+      goToSlide(currentIndex + 1);
+    }
+    startTimer();
+  };
+
   dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      goToSlide(index);
-      startTimer();
-    });
+    dot.addEventListener("pointerup", () => activateDot(index));
   });
 
   arrows.forEach((arrow) => {
-    arrow.addEventListener("click", () => {
-      const direction = arrow.dataset.direction;
-      if (direction === "prev") {
-        goToSlide(currentIndex - 1);
-      } else {
-        goToSlide(currentIndex + 1);
-      }
-      startTimer();
-    });
+    arrow.addEventListener("pointerup", () => activateArrow(arrow));
   });
-
-  slider.addEventListener("mouseenter", stopTimer);
-  slider.addEventListener("mouseleave", startTimer);
 
   setActiveSlide(0);
   startTimer();
