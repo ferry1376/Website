@@ -334,13 +334,13 @@ html[dir="rtl"] .language-toggle {
 .hero-slider {
   position: relative;
   overflow: hidden;
-  padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 5vw, 5rem);
+  padding: 0;
   border-bottom: 1px solid #e2dbd2;
-  min-height: clamp(420px, 60vh, 560px);
+  min-height: 0;
 }
 
 body.home .hero-slider {
-  margin-top: clamp(-5.5rem, -10vw, -7.5rem);
+  margin-top: 0;
 }
 
 .hero-slider::before {
@@ -365,7 +365,7 @@ body.home .hero-slider {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center 20%;
   opacity: 0;
   transition: opacity 0.6s ease;
 }
@@ -473,9 +473,10 @@ h3 {
 }
 
 .hero-media {
-  position: absolute;
-  inset: 0;
-  min-height: 100%;
+  position: relative;
+  width: 100%;
+  min-height: clamp(420px, 60vh, 560px);
+  aspect-ratio: 16 / 9;
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
@@ -489,7 +490,7 @@ h3 {
   display: inline-flex;
   gap: 0.75rem;
   align-items: center;
-  z-index: 2;
+  z-index: 3;
 }
 
 html[dir="rtl"] .hero-media-controls {
@@ -683,7 +684,13 @@ html[dir="rtl"] .hero-media-controls {
 }
 
 .hero-slider .hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
   grid-template-columns: minmax(0, 1fr);
+  padding: clamp(5.5rem, 10vw, 7.5rem) 0 clamp(3.5rem, 5vw, 5rem);
 }
 
 .portrait {
@@ -791,7 +798,7 @@ html[dir="rtl"] .hero-media-controls {
   }
 
   .hero-slider {
-    min-height: clamp(420px, 70vh, 520px);
+    min-height: 0;
   }
 }
 
@@ -810,17 +817,13 @@ html[dir="rtl"] .hero-media-controls {
   }
 
   .hero-slider {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    margin-top: -7rem;
-    padding: 7rem 0 0;
+    margin-top: 0;
+    padding: 0;
   }
 
   .hero-media {
     position: relative;
-    order: -1;
-    min-height: 80vh;
+    min-height: clamp(360px, 70vh, 480px);
     border-radius: 0;
     margin-top: 0;
   }

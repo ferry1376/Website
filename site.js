@@ -320,6 +320,10 @@ const initNavToggle = () => {
   const toggleButtons = document.querySelectorAll("[data-nav-toggle]");
   if (toggleButtons.length === 0) return;
 
+  const nav = document.querySelector(".nav");
+  const navRibbon = document.querySelector(".nav-ribbon");
+  let lastScrollY = window.scrollY;
+
   const setExpanded = (expanded) => {
     document.body.classList.toggle("nav-open", expanded);
     toggleButtons.forEach((button) => {
@@ -338,6 +342,32 @@ const initNavToggle = () => {
       setExpanded(false);
     });
   });
+
+  document.addEventListener("click", (event) => {
+    if (!document.body.classList.contains("nav-open")) return;
+    const target = event.target;
+    const clickedToggle = Array.from(toggleButtons).some((button) =>
+      button.contains(target)
+    );
+    if (clickedToggle) return;
+    if (nav && nav.contains(target)) return;
+    if (navRibbon && navRibbon.contains(target)) return;
+    setExpanded(false);
+  });
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!document.body.classList.contains("nav-open")) {
+        lastScrollY = window.scrollY;
+        return;
+      }
+      if (Math.abs(window.scrollY - lastScrollY) < 4) return;
+      setExpanded(false);
+      lastScrollY = window.scrollY;
+    },
+    { passive: true }
+  );
 };
 
 initNavToggle();
