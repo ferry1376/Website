@@ -307,9 +307,6 @@ const initHeroSlider = () => {
     });
   });
 
-  slider.addEventListener("mouseenter", stopTimer);
-  slider.addEventListener("mouseleave", startTimer);
-
   setActiveSlide(0);
   startTimer();
 };
