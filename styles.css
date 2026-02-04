@@ -494,7 +494,7 @@ h3 {
 .hero-media {
   position: relative;
   width: 100%;
-  height: clamp(520px, 85svh, calc(100svh - var(--header-height)));
+  height: clamp(560px, 90svh, calc(100svh - var(--header-height)));
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
@@ -844,7 +844,7 @@ html[dir="rtl"] .hero-media-controls {
 
   .hero-media {
     position: relative;
-    height: clamp(360px, 75svh, calc(100svh - var(--header-height)));
+    height: clamp(380px, 80svh, calc(100svh - var(--header-height)));
     border-radius: 0;
     margin-top: 0;
   }
