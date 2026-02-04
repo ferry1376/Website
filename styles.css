@@ -907,9 +907,9 @@ html[dir="rtl"] .hero-media-controls {
   }
 
   .hero-media-controls {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    left: auto;
+    right: clamp(0.75rem, 2vw, 1.5rem);
+    transform: none;
   }
 }
 
