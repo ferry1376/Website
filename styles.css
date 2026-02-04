@@ -871,6 +871,9 @@ html[dir="rtl"] .hero-media-controls {
     grid-template-rows: auto auto;
     padding: clamp(1.5rem, 6vw, 2.5rem);
     align-content: start;
+    text-align: center;
+    background: #3f5e6f;
+    color: #f8f4ee;
   }
 
   .hero-slide::before {
@@ -881,14 +884,24 @@ html[dir="rtl"] .hero-media-controls {
     position: relative;
     inset: auto;
     order: 1;
-    height: clamp(220px, 50vw, 320px);
-    border-radius: 1.25rem;
+    height: clamp(240px, 65vw, 380px);
+    border-radius: 0;
   }
 
   .slide__copy {
     order: 2;
     width: 100%;
-    margin-top: clamp(1.5rem, 5vw, 2rem);
+    margin-top: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  .hero-slide h1 {
+    color: inherit;
+  }
+
+  .hero-media-controls {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
   }
 }
 
