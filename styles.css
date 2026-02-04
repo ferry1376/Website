@@ -19,6 +19,10 @@ body {
   line-height: 1.7;
 }
 
+:root {
+  --header-height: clamp(64px, 8vh, 96px);
+}
+
 html[dir="rtl"] body {
   font-family: "Vazirmatn", "Inter", system-ui, sans-serif;
 }
@@ -490,8 +494,7 @@ h3 {
 .hero-media {
   position: relative;
   width: 100%;
-  height: clamp(420px, 60vh, 560px);
-  max-height: 100svh;
+  height: clamp(520px, 85svh, calc(100svh - var(--header-height)));
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
@@ -500,7 +503,9 @@ h3 {
 
 .hero-media-controls {
   position: absolute;
-  bottom: clamp(0.75rem, 2vw, 1.5rem);
+  bottom: calc(
+    clamp(0.75rem, 2vw, 1.5rem) + env(safe-area-inset-bottom, 0px)
+  );
   right: clamp(0.75rem, 2vw, 1.5rem);
   display: inline-flex;
   gap: 0.75rem;
@@ -839,8 +844,7 @@ html[dir="rtl"] .hero-media-controls {
 
   .hero-media {
     position: relative;
-    height: clamp(360px, 70vh, 480px);
-    max-height: 100svh;
+    height: clamp(360px, 75svh, calc(100svh - var(--header-height)));
     border-radius: 0;
     margin-top: 0;
   }
