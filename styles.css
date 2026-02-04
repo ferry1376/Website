@@ -490,8 +490,8 @@ h3 {
 .hero-media {
   position: relative;
   width: 100%;
-  min-height: clamp(420px, 60vh, 560px);
-  aspect-ratio: 16 / 9;
+  height: clamp(420px, 60vh, 560px);
+  max-height: 100svh;
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
@@ -839,7 +839,8 @@ html[dir="rtl"] .hero-media-controls {
 
   .hero-media {
     position: relative;
-    min-height: clamp(360px, 70vh, 480px);
+    height: clamp(360px, 70vh, 480px);
+    max-height: 100svh;
     border-radius: 0;
     margin-top: 0;
   }
