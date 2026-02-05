@@ -469,13 +469,6 @@ body.home .hero-slider {
   inset: 0;
   background:
     linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--hero-surface) 92%, transparent) 0%,
-      color-mix(in srgb, var(--hero-surface) 72%, transparent)
-        calc(var(--header-height) * 0.62),
-      rgba(246, 241, 234, 0) var(--header-height)
-    ),
-    linear-gradient(
       270deg,
       color-mix(in srgb, var(--hero-surface) 42%, transparent) 0%,
       transparent 12%
@@ -490,21 +483,6 @@ body.home .hero-slider {
 }
 
 
-.header-band {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: calc(var(--header-height) + 16px);
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--hero-surface) 92%, transparent) 0%,
-    color-mix(in srgb, var(--hero-surface) 42%, transparent) 60%,
-    rgba(246, 241, 234, 0) 100%
-  );
-  z-index: 2;
-  pointer-events: none;
-}
 
 .slide__media img {
   position: relative;
@@ -517,13 +495,8 @@ body.home .hero-slider {
 }
 
 @media (min-width: 901px) {
-  .hero-slider .hero-slide {
-    padding-top: var(--header-height);
-  }
-
-
   .hero-slider .slide__media img {
-    object-position: 99% 56%;
+    object-position: 99% 30%;
     transform: translateX(6.5%) scale(0.79);
     transform-origin: right center;
     -webkit-mask-image:
