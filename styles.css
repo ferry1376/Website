@@ -404,9 +404,9 @@ body.home .hero-slider {
   inset: 0;
   background: linear-gradient(
     90deg,
-    color-mix(in srgb, var(--hero-surface) 96%, white) 0%,
-    color-mix(in srgb, var(--hero-surface) 85%, white) 32%,
-    rgba(246, 241, 234, 0.2) 55%,
+    color-mix(in srgb, var(--hero-surface) 92%, white) 0%,
+    color-mix(in srgb, var(--hero-surface) 72%, transparent) 28%,
+    rgba(246, 241, 234, 0.1) 48%,
     rgba(246, 241, 234, 0) 100%
   );
   z-index: 1;
@@ -434,8 +434,8 @@ body.home .hero-slider {
   background: linear-gradient(
     90deg,
     var(--hero-surface) 0%,
-    color-mix(in srgb, var(--hero-surface) 80%, transparent) 16%,
-    transparent 36%
+    color-mix(in srgb, var(--hero-surface) 65%, transparent) 11%,
+    transparent 24%
   );
   z-index: 1;
   pointer-events: none;
@@ -446,8 +446,8 @@ body.home .hero-slider {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(270deg, var(--hero-surface) 0%, transparent 22%),
-    linear-gradient(0deg, var(--hero-surface) 0%, transparent 24%);
+    linear-gradient(270deg, var(--hero-surface) 0%, transparent 14%),
+    linear-gradient(0deg, var(--hero-surface) 0%, transparent 12%);
   z-index: 1;
   pointer-events: none;
 }
@@ -468,11 +468,11 @@ body.home .hero-slider {
     transform: scale(0.9);
     transform-origin: 82% center;
     -webkit-mask-image:
-      linear-gradient(90deg, transparent 0%, #000 18%, #000 100%),
-      linear-gradient(180deg, #000 0%, #000 82%, transparent 100%);
+      linear-gradient(90deg, transparent 0%, #000 14%, #000 100%),
+      linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
     mask-image:
-      linear-gradient(90deg, transparent 0%, #000 18%, #000 100%),
-      linear-gradient(180deg, #000 0%, #000 82%, transparent 100%);
+      linear-gradient(90deg, transparent 0%, #000 14%, #000 100%),
+      linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
     -webkit-mask-size: 100% 100%, 100% 100%;
     mask-size: 100% 100%, 100% 100%;
     -webkit-mask-repeat: no-repeat, no-repeat;
