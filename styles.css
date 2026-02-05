@@ -48,7 +48,7 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 20;
+  z-index: 1000;
   backdrop-filter: blur(6px);
 }
 
@@ -497,13 +497,10 @@ body.home .hero-slider {
     padding-top: var(--header-height);
   }
 
-  .hero-slider .slide__media {
-    inset: calc(-1 * var(--header-height)) 0 0;
-  }
 
   .hero-slider .slide__media img {
     object-position: 99% 40%;
-    transform: translateX(6.5%) scale(0.79);
+    transform: translateX(6.5%) translateY(3.5%) scale(0.79);
     transform-origin: right center;
     -webkit-mask-image:
       linear-gradient(90deg, transparent 0%, #000 14%, #000 100%),
