@@ -431,6 +431,14 @@ body.home .hero-slider {
   display: block;
 }
 
+@media (min-width: 901px) {
+  .hero-slider .slide__media img {
+    object-position: 85% center;
+    transform: scale(0.92);
+    transform-origin: 80% center;
+  }
+}
+
 .slide__media--placeholder {
   display: flex;
   align-items: center;
