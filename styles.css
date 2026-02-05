@@ -465,8 +465,8 @@ body.home .hero-slider {
 @media (min-width: 901px) {
   .hero-slider .slide__media img {
     object-position: 99% 40%;
-    transform: scale(0.81);
-    transform-origin: 95% 45%;
+    transform: translateX(5%) scale(0.81);
+    transform-origin: right center;
     -webkit-mask-image:
       linear-gradient(90deg, transparent 0%, #000 14%, #000 100%),
       linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
