@@ -489,6 +489,23 @@ body.home .hero-slider {
   pointer-events: none;
 }
 
+
+.header-band {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: calc(var(--header-height) + 16px);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--hero-surface) 92%, transparent) 0%,
+    color-mix(in srgb, var(--hero-surface) 42%, transparent) 60%,
+    rgba(246, 241, 234, 0) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
 .slide__media img {
   position: relative;
   z-index: 0;
