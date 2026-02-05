@@ -1214,6 +1214,7 @@ html[lang="fa"] .hero-media-controls {
 /* FA-only RTL overrides (keep EN/base untouched) */
 html[lang="fa"] .hero-slide {
   direction: rtl;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
 html[lang="fa"] .slide__copy {
@@ -1273,7 +1274,7 @@ html[lang="fa"] .slide__media::after {
 
 @media (min-width: 901px) {
   html[lang="fa"] .hero-slider .slide__media img {
-    object-position: 1% 30%;
+    object-position: 1% 56%;
     transform: translateX(-6.5%) scale(0.79);
     transform-origin: left center;
     -webkit-mask-image:
