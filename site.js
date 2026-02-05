@@ -38,33 +38,6 @@ const applyLanguage = (language) => {
   document.documentElement.lang = language;
   document.documentElement.dir = language === "fa" ? "rtl" : "ltr";
 
-  const isRtl = language === "fa";
-  const prevArrow = document.querySelector('.hero-arrow[data-direction="prev"]');
-  const nextArrow = document.querySelector('.hero-arrow[data-direction="next"]');
-
-  if (prevArrow) {
-    const icon = prevArrow.querySelector("span");
-    if (icon) icon.textContent = isRtl ? "→" : "←";
-    if (!prevArrow.dataset.defaultAriaLabel) {
-      prevArrow.dataset.defaultAriaLabel = prevArrow.getAttribute("aria-label") || "";
-    }
-  }
-
-  if (nextArrow) {
-    const icon = nextArrow.querySelector("span");
-    if (icon) icon.textContent = isRtl ? "←" : "→";
-    if (!nextArrow.dataset.defaultAriaLabel) {
-      nextArrow.dataset.defaultAriaLabel = nextArrow.getAttribute("aria-label") || "";
-    }
-  }
-
-  if (prevArrow && nextArrow) {
-    const prevDefault = prevArrow.dataset.defaultAriaLabel || "";
-    const nextDefault = nextArrow.dataset.defaultAriaLabel || "";
-    prevArrow.setAttribute("aria-label", isRtl ? nextDefault : prevDefault);
-    nextArrow.setAttribute("aria-label", isRtl ? prevDefault : nextDefault);
-  }
-
   document.querySelectorAll("[data-language-toggle]").forEach((button) => {
     const isActive = button.dataset.language === language;
     button.classList.toggle("is-active", isActive);
@@ -329,11 +302,7 @@ const initHeroSlider = () => {
 
   const activateArrow = (arrow) => {
     const direction = arrow.dataset.direction;
-    const isRtl = document.documentElement.lang === "fa";
-    const isPrev = direction === "prev";
-    const shouldGoBack = isRtl ? !isPrev : isPrev;
-
-    if (shouldGoBack) {
+    if (direction === "prev") {
       goToSlide(currentIndex - 1);
     } else {
       goToSlide(currentIndex + 1);
