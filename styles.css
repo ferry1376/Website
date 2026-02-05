@@ -421,6 +421,26 @@ body.home .hero-slider {
   pointer-events: auto;
 }
 
+.slide__copy::before {
+  content: "";
+  position: absolute;
+  inset: -0.65rem 28% -0.65rem -0.9rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--hero-surface) 44%, transparent) 0%,
+    color-mix(in srgb, var(--hero-surface) 22%, transparent) 40%,
+    rgba(246, 241, 234, 0) 78%
+  );
+  z-index: 0;
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+.slide__copy > * {
+  position: relative;
+  z-index: 1;
+}
+
 .slide__media {
   position: absolute;
   inset: 0;
@@ -475,7 +495,7 @@ body.home .hero-slider {
 @media (min-width: 901px) {
   .hero-slider .slide__media img {
     object-position: 99% 40%;
-    transform: translateX(6.5%) scale(0.79);
+    transform: translateX(6.5%) translateY(3%) scale(0.79);
     transform-origin: right center;
     -webkit-mask-image:
       linear-gradient(90deg, transparent 0%, #000 14%, #000 100%),
