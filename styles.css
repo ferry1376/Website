@@ -404,10 +404,11 @@ body.home .hero-slider {
   inset: 0;
   background: linear-gradient(
     90deg,
-    color-mix(in srgb, var(--hero-surface) 84%, transparent) 0%,
-    color-mix(in srgb, var(--hero-surface) 48%, transparent) 26%,
-    rgba(246, 241, 234, 0.04) 44%,
-    rgba(246, 241, 234, 0) 100%
+    color-mix(in srgb, var(--hero-surface) 90%, transparent) 0%,
+    color-mix(in srgb, var(--hero-surface) 86%, transparent) 34%,
+    color-mix(in srgb, var(--hero-surface) 42%, transparent) 58%,
+    rgba(246, 241, 234, 0.03) 72%,
+    rgba(246, 241, 234, 0) 82%
   );
   z-index: 1;
 }
