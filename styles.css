@@ -1217,6 +1217,35 @@ html[lang="fa"] .hero-slide {
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 }
 
+@media (min-width: 901px) {
+  html[lang="fa"] .hero-slide {
+    grid-template-areas: "media copy";
+  }
+
+  html[lang="fa"] .slide__copy {
+    grid-area: copy;
+    position: relative;
+    inset: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: auto;
+    max-width: 480px;
+    justify-self: end;
+  }
+
+  html[lang="fa"] .slide__media {
+    grid-area: media;
+    position: relative;
+    inset: auto;
+    margin: 0;
+    justify-self: start;
+    align-self: stretch;
+  }
+}
+
 html[lang="fa"] .slide__copy {
   text-align: right;
   justify-self: end;
