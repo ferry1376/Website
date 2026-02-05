@@ -143,7 +143,7 @@
               </div>
             </div>
           </nav>
-          <div class="language-toggle" role="group" aria-label="Language selection">
+          <div class="language-toggle" role="group" aria-label="Language selection" data-aria-label="languageSelectionAriaLabel">
             <button
               class="language-button"
               type="button"
@@ -168,12 +168,12 @@
     </header>
 
     <main>
-      <section class="hero hero-slider" aria-label="Featured highlights">
+      <section class="hero hero-slider" aria-label="Featured highlights" data-aria-label="heroSectionAriaLabel">
         <div class="hero-media">
           <div class="hero-slides">
             <div class="hero-slide is-active">
               <div class="slide__copy hero-content">
-                <h1>
+                <h1 data-field="heroSlideOneHeadline">
                   Depth, clarity, and steadiness for the life you want to lead.
                 </h1>
               </div>
@@ -186,7 +186,7 @@
             </div>
             <div class="hero-slide">
               <div class="slide__copy hero-content">
-                <h1>Grounded support for meaningful change.</h1>
+                <h1 data-field="heroSlideTwoHeadline">Grounded support for meaningful change.</h1>
               </div>
               <div class="slide__media">
                 <img
@@ -197,7 +197,7 @@
             </div>
             <div class="hero-slide">
               <div class="slide__copy hero-content">
-                <h1>Insightful therapy for resilient living.</h1>
+                <h1 data-field="heroSlideThreeHeadline">Insightful therapy for resilient living.</h1>
               </div>
               <div class="slide__media">
                 <img
@@ -208,7 +208,7 @@
             </div>
             <div class="hero-slide" aria-hidden="true">
               <div class="slide__copy hero-content">
-                <h1>Therapy that honors complexity and growth.</h1>
+                <h1 data-field="heroSlideFourHeadline">Therapy that honors complexity and growth.</h1>
               </div>
               <div class="slide__media slide__media--placeholder">
                 <div class="hero-slide-shape" aria-hidden="true"></div>
@@ -221,6 +221,7 @@
               type="button"
               data-direction="prev"
               aria-label="Previous slide"
+              data-aria-label="heroPrevSlideAriaLabel"
             >
               <span aria-hidden="true">←</span>
             </button>
@@ -229,6 +230,7 @@
               type="button"
               data-direction="next"
               aria-label="Next slide"
+              data-aria-label="heroNextSlideAriaLabel"
             >
               <span aria-hidden="true">→</span>
             </button>
@@ -240,8 +242,8 @@
       <section class="section latest-articles-section" id="latest-articles">
         <div class="container">
           <div class="section-header">
-            <h2>Latest articles</h2>
-            <a class="nav-link" href="articles.html">View all</a>
+            <h2 data-field="latestArticlesHeading">Latest articles</h2>
+            <a class="nav-link" href="articles.html" data-field="latestArticlesViewAll">View all</a>
           </div>
           <div class="latest-articles" id="latest-articles-list"></div>
         </div>
