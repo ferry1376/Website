@@ -115,5 +115,20 @@
   "expectationsBody": "The first few sessions focus on getting to know you—your history, goals, and the patterns you want to shift. From there we build a cadence that supports meaningful progress, whether you are seeking clarity, healing, or growth.",
   "expectationsNote": "Virtual appointments are available for clients across California. In-person sessions can be arranged by request.",
   "expectationsPrimaryCtaLabel": "Reach out",
-  "expectationsSecondaryCtaLabel": "Return home"
+  "expectationsSecondaryCtaLabel": "Return home",
+  "aboutPageTitle": "Esfahani Therapy | About",
+  "contactPageTitle": "Esfahani Therapy | Contact",
+  "languageSelectionAriaLabel": "Language selection",
+  "heroSectionAriaLabel": "Featured highlights",
+  "heroSlideOneHeadline": "Depth, clarity, and steadiness for the life you want to lead.",
+  "heroSlideTwoHeadline": "Grounded support for meaningful change.",
+  "heroSlideThreeHeadline": "Insightful therapy for resilient living.",
+  "heroSlideFourHeadline": "Therapy that honors complexity and growth.",
+  "heroPrevSlideAriaLabel": "Previous slide",
+  "heroNextSlideAriaLabel": "Next slide",
+  "latestArticlesHeading": "Latest articles",
+  "latestArticlesViewAll": "View all",
+  "contactEmailHeading": "Email",
+  "contactPhoneHeading": "Phone",
+  "latestArticleReadPrefix": "Read"
 }

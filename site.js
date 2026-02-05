@@ -190,17 +190,21 @@ const renderArticles = (articles) => {
     .join("");
 };
 
-const renderLatestArticles = (articles) => {
+let siteContentData = {};
+let articlesDataCache = [];
+
+const renderLatestArticles = (articles, siteContent = siteContentData) => {
   const container = document.querySelector("#latest-articles-list");
   if (!container || !Array.isArray(articles)) return;
 
   const latest = articles.slice(0, 3);
+  const readPrefix = siteContent.latestArticleReadPrefix || "Read";
 
   container.innerHTML = latest
     .map(
       (article) => `
       <article class="latest-article-card">
-        <a href="articles.html" aria-label="Read ${article.title}">
+        <a href="articles.html" aria-label="${readPrefix} ${article.title}">
           <div class="latest-article-media">
             ${article.image ? `<img src="${article.image}" alt="${article.imageAlt || article.title}" />` : ""}
           </div>
@@ -220,10 +224,12 @@ fetch(SITE_DATA_URL)
     return response.json();
   })
   .then((data) => {
+    siteContentData = data;
     applyBasicFields(data);
     renderCards(data.homeCards);
     renderFocusList(data.focusList);
     renderArticlesPlaceholder(data.articlesPlaceholderHtml);
+    renderLatestArticles(articlesDataCache, siteContentData);
   })
   .catch((error) => {
     console.error(error);
@@ -237,8 +243,9 @@ fetch(ARTICLES_DATA_URL)
     return response.json();
   })
   .then((data) => {
-    renderArticles(data.articles);
-    renderLatestArticles(data.articles);
+    articlesDataCache = data.articles;
+    renderArticles(articlesDataCache);
+    renderLatestArticles(articlesDataCache, siteContentData);
   })
   .catch((error) => {
     console.error(error);
