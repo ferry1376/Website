@@ -1211,120 +1211,16 @@ html[lang="fa"] .hero-media-controls {
   }
 }
 
-/* FA-only RTL overrides (keep EN/base untouched) */
-html[lang="fa"] .hero-slide {
-  direction: rtl;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-}
-
-@media (min-width: 901px) {
-  html[lang="fa"] .hero-slide {
-    grid-template-areas: "media copy";
-  }
-
-  html[lang="fa"] .slide__copy {
-    grid-area: copy;
-    position: relative;
-    inset: auto;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    transform: none;
-    width: auto;
-    max-width: 480px;
-    justify-self: end;
-  }
-
-  html[lang="fa"] .slide__media {
-    grid-area: media;
-    position: relative;
-    inset: auto;
-    margin: 0;
-    justify-self: start;
-    align-self: stretch;
-  }
-}
-
+/* FA-only hero adjustments: keep EN layout/framing unchanged */
 html[lang="fa"] .slide__copy {
+  direction: rtl;
   text-align: right;
-  justify-self: end;
-  unicode-bidi: isolate;
-}
-
-html[lang="fa"] .slide__media {
-  justify-self: start;
-}
-
-html[lang="fa"] .hero-slide::before {
-  background: linear-gradient(
-    270deg,
-    color-mix(in srgb, var(--hero-surface) 82%, transparent) 0%,
-    color-mix(in srgb, var(--hero-surface) 70%, transparent) 34%,
-    color-mix(in srgb, var(--hero-surface) 28%, transparent) 58%,
-    rgba(246, 241, 234, 0.015) 72%,
-    rgba(246, 241, 234, 0) 84%
-  );
-}
-
-html[lang="fa"] .slide__copy::before {
-  inset: -0.65rem -0.9rem -0.65rem 28%;
-  background: linear-gradient(
-    270deg,
-    color-mix(in srgb, var(--hero-surface) 44%, transparent) 0%,
-    color-mix(in srgb, var(--hero-surface) 22%, transparent) 40%,
-    rgba(246, 241, 234, 0) 78%
-  );
-}
-
-html[lang="fa"] .slide__media::before {
-  background: linear-gradient(
-    270deg,
-    color-mix(in srgb, var(--hero-surface) 56%, transparent) 0%,
-    color-mix(in srgb, var(--hero-surface) 34%, transparent) 12%,
-    color-mix(in srgb, var(--hero-surface) 14%, transparent) 24%,
-    rgba(246, 241, 234, 0) 40%
-  );
-}
-
-html[lang="fa"] .slide__media::after {
-  background:
-    linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--hero-surface) 42%, transparent) 0%,
-      transparent 12%
-    ),
-    linear-gradient(
-      0deg,
-      color-mix(in srgb, var(--hero-surface) 38%, transparent) 0%,
-      transparent 10%
-    );
-}
-
-@media (min-width: 901px) {
-  html[lang="fa"] .hero-slider .slide__media img {
-    object-position: 1% 56%;
-    transform: translateX(-6.5%) scale(0.79);
-    transform-origin: left center;
-    -webkit-mask-image:
-      linear-gradient(270deg, transparent 0%, #000 14%, #000 100%),
-      linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
-    mask-image:
-      linear-gradient(270deg, transparent 0%, #000 14%, #000 100%),
-      linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
-  }
+  unicode-bidi: plaintext;
 }
 
 html[lang="fa"] .hero-media-controls {
   left: clamp(0.75rem, 2vw, 1.5rem);
   right: auto;
-}
-
-@media (max-width: 900px) {
-  html[lang="fa"] .hero-media-controls {
-    left: clamp(0.75rem, 2vw, 1.5rem);
-    right: auto;
-  }
 }
 
 @media (max-width: 720px) {
@@ -1335,25 +1231,6 @@ html[lang="fa"] .hero-media-controls {
 }
 
 @media (max-width: 768px) {
-  html[lang="fa"] .slide__copy::before {
-    inset: -3rem -20px -2.5rem -8vw;
-    background:
-      radial-gradient(
-        120% 90% at 95% 100%,
-        rgba(22, 22, 22, 0.56) 0%,
-        rgba(22, 22, 22, 0.38) 35%,
-        rgba(22, 22, 22, 0.12) 62%,
-        rgba(22, 22, 22, 0) 86%
-      ),
-      linear-gradient(
-        270deg,
-        rgba(22, 22, 22, 0.42) 0%,
-        rgba(22, 22, 22, 0.24) 30%,
-        rgba(22, 22, 22, 0.08) 55%,
-        rgba(22, 22, 22, 0) 78%
-      );
-  }
-
   html[lang="fa"] .hero-media-controls {
     left: 16px;
     right: auto;
