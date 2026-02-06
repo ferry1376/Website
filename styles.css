@@ -1205,7 +1205,7 @@ h3 {
 
 /* FA-only hero adjustments: keep EN layout/framing unchanged */
 html[lang="fa"] .slide__copy {
-  text-align: right;
+  text-align: left;
   unicode-bidi: plaintext;
 }
 
