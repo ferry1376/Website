@@ -1219,6 +1219,15 @@ html[lang="fa"] .slide__media {
   grid-column: 2;
 }
 
+html[lang="fa"] .slide__copy::before {
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--hero-surface) 44%, transparent) 0%,
+    color-mix(in srgb, var(--hero-surface) 22%, transparent) 40%,
+    rgba(246, 241, 234, 0) 78%
+  );
+}
+
 html[lang="fa"] .hero-media-controls {
   left: clamp(0.75rem, 2vw, 1.5rem);
   right: auto;
