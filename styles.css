@@ -1205,8 +1205,13 @@ h3 {
 
 /* FA-only hero adjustments: keep EN layout/framing unchanged */
 html[lang="fa"] .slide__copy {
+  grid-column: 1;
   text-align: left;
   unicode-bidi: plaintext;
+}
+
+html[lang="fa"] .slide__media {
+  grid-column: 2;
 }
 
 html[lang="fa"] .hero-media-controls {
