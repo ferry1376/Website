@@ -646,10 +646,6 @@ h3 {
   z-index: 3;
 }
 
-html[lang="fa"] .hero-media-controls {
-  direction: ltr;
-}
-
 .hero-arrow {
   width: clamp(44px, 8vw, 64px);
   height: clamp(44px, 8vw, 64px);
@@ -1213,7 +1209,6 @@ html[lang="fa"] .hero-media-controls {
 
 /* FA-only hero adjustments: keep EN layout/framing unchanged */
 html[lang="fa"] .slide__copy {
-  direction: rtl;
   text-align: right;
   unicode-bidi: plaintext;
 }
