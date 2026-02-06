@@ -1204,9 +1204,14 @@ h3 {
 }
 
 /* FA-only hero adjustments: keep EN layout/framing unchanged */
+html[lang="fa"] .hero-slide {
+  direction: ltr;
+}
+
 html[lang="fa"] .slide__copy {
+  direction: rtl;
   grid-column: 1;
-  text-align: left;
+  text-align: right;
   unicode-bidi: plaintext;
 }
 
