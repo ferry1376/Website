@@ -23,10 +23,6 @@ body {
   --header-height: clamp(64px, 8vh, 96px);
 }
 
-html[lang="fa"] {
-  direction: rtl;
-}
-
 html[lang="fa"] body {
   text-align: right;
 }
