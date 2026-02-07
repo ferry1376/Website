@@ -547,6 +547,12 @@ body.home .hero-slider {
   box-shadow: none;
 }
 
+.is-fa .hero-slider .hero-content {
+  direction: rtl;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
 .eyebrow {
   text-transform: uppercase;
   font-size: 0.75rem;
