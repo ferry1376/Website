@@ -1202,3 +1202,23 @@ h3 {
     z-index: 4;
   }
 }
+/* FA-only hero adjustments: keep EN layout/framing unchanged */
+html[lang="fa"] .hero-slide {
+  direction: ltr;
+}
+
+html[lang="fa"] .slide__copy {
+  direction: rtl;
+  grid-column: 1;
+  text-align: right;
+  unicode-bidi: plaintext;
+}
+
+html[lang="fa"] .slide__media {
+  grid-column: 2;
+}
+
+html[lang="fa"] .hero-media-controls {
+  left: clamp(0.75rem, 2vw, 1.5rem);
+  right: auto;
+}
