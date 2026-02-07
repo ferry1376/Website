@@ -634,6 +634,7 @@ h3 {
   overflow: hidden;
   box-shadow: none;
   z-index: 0;
+  --hero-controls-height: calc(clamp(44px, 8vw, 64px) + 0.75rem);
 }
 
 .hero-controls-bar {
