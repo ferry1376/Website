@@ -23,7 +23,11 @@ body {
   --header-height: clamp(64px, 8vh, 96px);
 }
 
-html[dir="rtl"] body {
+html[lang="fa"] body {
+  text-align: right;
+}
+
+html[lang="fa"] body {
   font-family: "Vazirmatn", "Inter", system-ui, sans-serif;
 }
 
@@ -122,32 +126,32 @@ a {
   top: 6px;
 }
 
-html[dir="rtl"] .nav {
+html[lang="fa"] .nav {
   flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .nav-ribbon {
+html[lang="fa"] .nav-ribbon {
   flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .nav-item {
+html[lang="fa"] .nav-item {
   flex-direction: row;
   direction: rtl;
 }
 
-html[dir="rtl"] .nav-item:nth-child(1) {
+html[lang="fa"] .nav-item:nth-child(1) {
   order: 4;
 }
 
-html[dir="rtl"] .nav-item:nth-child(2) {
+html[lang="fa"] .nav-item:nth-child(2) {
   order: 3;
 }
 
-html[dir="rtl"] .nav-item:nth-child(3) {
+html[lang="fa"] .nav-item:nth-child(3) {
   order: 2;
 }
 
-html[dir="rtl"] .nav-item:nth-child(4) {
+html[lang="fa"] .nav-item:nth-child(4) {
   order: 1;
 }
 
@@ -203,7 +207,7 @@ html[dir="rtl"] .nav-item:nth-child(4) {
   z-index: 20;
 }
 
-html[dir="rtl"] .nav-dropdown {
+html[lang="fa"] .nav-dropdown {
   text-align: right;
 }
 
@@ -235,7 +239,7 @@ html[dir="rtl"] .nav-dropdown {
   color: #fffaf3;
 }
 
-html[dir="rtl"] .language-toggle {
+html[lang="fa"] .language-toggle {
   flex-direction: row-reverse;
 }
 
@@ -294,7 +298,7 @@ html[dir="rtl"] .language-toggle {
     padding-top: 0.5rem;
   }
 
-  html[dir="rtl"] .nav {
+  html[lang="fa"] .nav {
     align-items: flex-end;
   }
 
@@ -302,7 +306,7 @@ html[dir="rtl"] .language-toggle {
     text-align: left;
   }
 
-  html[dir="rtl"] .nav-open .nav {
+  html[lang="fa"] .nav-open .nav {
     text-align: right;
   }
 
@@ -328,7 +332,7 @@ html[dir="rtl"] .language-toggle {
     text-shadow: 0 2px 4px rgba(16, 16, 16, 0.35);
   }
 
-  html[dir="rtl"] .nav-open .language-toggle {
+  html[lang="fa"] .nav-open .language-toggle {
     margin-right: auto;
     margin-left: 0;
   }
@@ -636,10 +640,6 @@ h3 {
   gap: 0.75rem;
   align-items: center;
   z-index: 3;
-}
-
-html[dir="rtl"] .hero-media-controls {
-  direction: ltr;
 }
 
 .hero-arrow {
@@ -1044,7 +1044,7 @@ html[dir="rtl"] .hero-media-controls {
     padding: 1rem 1.25rem;
   }
 
-  html[dir="rtl"] .nav-ribbon {
+  html[lang="fa"] .nav-ribbon {
     flex-direction: row-reverse;
   }
 
@@ -1052,7 +1052,7 @@ html[dir="rtl"] .hero-media-controls {
     margin-inline-start: auto;
   }
 
-  html[dir="rtl"] .nav-toggle {
+  html[lang="fa"] .nav-toggle {
     margin-inline-start: 1rem;
     margin-inline-end: auto;
   }
