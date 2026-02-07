@@ -127,7 +127,7 @@ a {
 }
 
 html[lang="fa"] .nav {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 html[lang="fa"] .nav-ribbon {
