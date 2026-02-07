@@ -37,6 +37,7 @@ const getPreferredLanguage = () => {
 const applyLanguage = (language) => {
   document.documentElement.lang = language;
   document.documentElement.dir = "ltr";
+  document.body.classList.toggle("is-fa", language === "fa");
 
   document.querySelectorAll("[data-language-toggle]").forEach((button) => {
     const isActive = button.dataset.language === language;

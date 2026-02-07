@@ -642,6 +642,11 @@ h3 {
   z-index: 3;
 }
 
+.is-fa .hero-media-controls {
+  right: auto;
+  left: clamp(0.75rem, 2vw, 1.5rem);
+}
+
 .hero-arrow {
   width: clamp(44px, 8vw, 64px);
   height: clamp(44px, 8vw, 64px);
