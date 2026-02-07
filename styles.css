@@ -642,7 +642,7 @@ h3 {
   z-index: 3;
 }
 
-[dir="rtl"] .hero-media-controls {
+.is-fa .hero-media-controls {
   right: auto;
   left: clamp(0.75rem, 2vw, 1.5rem);
 }
