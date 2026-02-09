@@ -502,20 +502,17 @@ body.home .hero-slider {
 }
 
 @media (min-width: 901px) {
+  .hero-slider .slide__copy {
+    background: color-mix(in srgb, var(--hero-surface) 65%, transparent);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
   .hero-slider .slide__media img {
     object-position: 99% 30%;
-    transform: translateX(6.5%) scale(0.79);
-    transform-origin: right center;
-    -webkit-mask-image:
-      linear-gradient(90deg, #000 0%, #000 100%),
-      linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
-    mask-image:
-      linear-gradient(90deg, #000 0%, #000 100%),
-      linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
-    -webkit-mask-size: 100% 100%, 100% 100%;
-    mask-size: 100% 100%, 100% 100%;
-    -webkit-mask-repeat: no-repeat, no-repeat;
-    mask-repeat: no-repeat, no-repeat;
+    transform: none;
+    mask-image: none;
+    -webkit-mask-image: none;
   }
 }
 
