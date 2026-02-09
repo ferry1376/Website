@@ -447,10 +447,7 @@ body.home .hero-slider {
 
 .slide__media {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: calc(50% - 1px);
+  inset: 0;
   z-index: 0;
   background: var(--hero-surface);
   overflow: hidden;
@@ -510,10 +507,10 @@ body.home .hero-slider {
     transform: translateX(6.5%) scale(0.79);
     transform-origin: right center;
     -webkit-mask-image:
-      linear-gradient(90deg, transparent 0%, #000 14%, #000 100%),
+      linear-gradient(90deg, #000 0%, #000 100%),
       linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
     mask-image:
-      linear-gradient(90deg, transparent 0%, #000 14%, #000 100%),
+      linear-gradient(90deg, #000 0%, #000 100%),
       linear-gradient(180deg, #000 0%, #000 94%, transparent 100%);
     -webkit-mask-size: 100% 100%, 100% 100%;
     mask-size: 100% 100%, 100% 100%;
