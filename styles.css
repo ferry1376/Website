@@ -467,6 +467,7 @@ body.home .hero-slider {
 }
 
 .hero-slider h1 {
+  font-size: clamp(2.2rem, 3.3vw, 3.1rem);
   color: #f9f4ee;
   text-shadow: 0 8px 18px rgba(10, 8, 7, 0.35);
 }
