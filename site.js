@@ -39,6 +39,10 @@ const applyLanguage = (language) => {
   document.documentElement.dir = "ltr";
   document.body.classList.toggle("is-fa", language === "fa");
 
+  document.querySelectorAll('[data-field="homeSectionLead"]').forEach((element) => {
+    element.dir = language === "fa" ? "rtl" : "ltr";
+  });
+
   document.querySelectorAll("[data-language-toggle]").forEach((button) => {
     const isActive = button.dataset.language === language;
     button.classList.toggle("is-active", isActive);
