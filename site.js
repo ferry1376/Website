@@ -1,5 +1,5 @@
 const SUPPORTED_LANGUAGES = ["en", "fa"];
-const DEFAULT_LANGUAGE = "en";
+const DEFAULT_LANGUAGE = "fa";
 const LANGUAGE_STORAGE_KEY = "preferredLanguage";
 
 const getLanguageFromUrl = () => {
