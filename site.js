@@ -148,7 +148,7 @@ const renderCards = (cards) => {
       (card) => `
       <div class="card">
         <h3>${card.title}</h3>
-        <p>${card.body}</p>
+        <p${card.dir ? ` dir="${card.dir}"` : ""}>${card.body}</p>
       </div>
     `
     )
