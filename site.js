@@ -43,6 +43,12 @@ const applyLanguage = (language) => {
     element.dir = language === "fa" ? "rtl" : "ltr";
   });
 
+  ["approachBody", "approachLead"].forEach((fieldName) => {
+    document.querySelectorAll(`[data-field="${fieldName}"]`).forEach((element) => {
+      element.dir = language === "fa" ? "rtl" : "ltr";
+    });
+  });
+
   document.querySelectorAll("[data-language-toggle]").forEach((button) => {
     const isActive = button.dataset.language === language;
     button.classList.toggle("is-active", isActive);
