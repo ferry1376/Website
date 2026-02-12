@@ -929,6 +929,11 @@ h3 {
   color: #1f4e4a;
 }
 
+html[lang="fa"] #focus-list .list-item {
+  direction: rtl;
+  text-align: right;
+}
+
 .section-muted {
   background: #f1ebe2;
 }
