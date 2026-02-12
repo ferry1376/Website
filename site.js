@@ -43,7 +43,7 @@ const applyLanguage = (language) => {
     element.dir = language === "fa" ? "rtl" : "ltr";
   });
 
-  ["approachBody", "approachLead"].forEach((fieldName) => {
+  ["approachBody", "approachLead", "focusSectionLead"].forEach((fieldName) => {
     document.querySelectorAll(`[data-field="${fieldName}"]`).forEach((element) => {
       element.dir = language === "fa" ? "rtl" : "ltr";
     });
