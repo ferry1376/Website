@@ -7,5 +7,37 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      (() => {
+        const isPersianSiteEntry = () =>
+          window.location.hash.includes("collections/site_fa/entries/site_fa");
+
+        const applyRtlToFocusLead = () => {
+          const textbox = document.querySelector('textarea[name="focusSectionLead"]');
+
+          if (!textbox) {
+            return;
+          }
+
+          if (isPersianSiteEntry()) {
+            textbox.dir = "rtl";
+            textbox.style.textAlign = "right";
+          } else {
+            textbox.dir = "ltr";
+            textbox.style.textAlign = "left";
+          }
+        };
+
+        const observer = new MutationObserver(applyRtlToFocusLead);
+
+        window.addEventListener("hashchange", applyRtlToFocusLead);
+        window.addEventListener("load", applyRtlToFocusLead);
+
+        observer.observe(document.body, {
+          childList: true,
+          subtree: true,
+        });
+      })();
+    </script>
   </body>
 </html>
